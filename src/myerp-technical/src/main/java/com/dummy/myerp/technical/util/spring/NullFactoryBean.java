@@ -10,7 +10,9 @@ import org.springframework.beans.factory.FactoryBean;
  */
 public class NullFactoryBean<T> implements FactoryBean<T> {
 
-    /** Classe de l'objet construit */
+    /**
+     * Classe de l'objet construit
+     */
     private final Class<T> objectType;
 
     /**

@@ -1,11 +1,11 @@
 package com.dummy.myerp.consumer.db.helper;
 
+import org.apache.commons.lang3.time.DateUtils;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Calendar;
 import java.util.Date;
-
-import org.apache.commons.lang3.time.DateUtils;
 
 
 /**
@@ -14,6 +14,7 @@ import org.apache.commons.lang3.time.DateUtils;
 public abstract class ResultSetHelper {
 
     // ==================== Constructeurs ====================
+
     /**
      * Constructeur.
      */
@@ -23,11 +24,12 @@ public abstract class ResultSetHelper {
 
 
     // ==================== Méthodes ====================
+
     /**
      * Renvoie la valeur de la colonne pColName dans un <code>Integer</code>.
      * Si la colonne vaut <code>null</code>, la méthode renvoie <code>null</code>
      *
-     * @param pRS : Le ResultSet à intéroger
+     * @param pRS      : Le ResultSet à intéroger
      * @param pColName : Le nom de la colonne dans le retour de la requête SQL
      * @return <code>Integer</code> ou <code>null</code>
      * @throws SQLException sur erreur SQL
@@ -45,7 +47,7 @@ public abstract class ResultSetHelper {
      * Renvoie la valeur de la colonne pColName dans un <code>Long</code>.
      * Si la colonne vaut <code>null</code>, la méthode renvoie <code>null</code>
      *
-     * @param pRS : Le ResultSet à intéroger
+     * @param pRS      : Le ResultSet à intéroger
      * @param pColName : Le nom de la colonne dans le retour de la requête SQL
      * @return <code>Long</code> ou <code>null</code>
      * @throws SQLException sur erreur SQL
@@ -64,7 +66,7 @@ public abstract class ResultSetHelper {
      * Renvoie la valeur de la colonne pColName dans un {@link Date} en faisant un truncate de l'heure.
      * Si la colonne vaut <code>null</code>, la méthode renvoie <code>null</code>.
      *
-     * @param pRS : Le ResultSet à intéroger
+     * @param pRS      : Le ResultSet à intéroger
      * @param pColName : Le nom de la colonne dans le retour de la requête SQL
      * @return {@link Date} ou <code>null</code>
      * @throws SQLException sur erreur SQL

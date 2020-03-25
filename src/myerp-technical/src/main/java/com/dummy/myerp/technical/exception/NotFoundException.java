@@ -6,7 +6,9 @@ package com.dummy.myerp.technical.exception;
  */
 public class NotFoundException extends Exception {
 
-    /** serialVersionUID */
+    /**
+     * serialVersionUID
+     */
     private static final long serialVersionUID = 1L;
 
     /**
@@ -38,7 +40,7 @@ public class NotFoundException extends Exception {
      * Constructeur.
      *
      * @param pMessage -
-     * @param pCause -
+     * @param pCause   -
      */
     public NotFoundException(String pMessage, Throwable pCause) {
         super(pMessage, pCause);

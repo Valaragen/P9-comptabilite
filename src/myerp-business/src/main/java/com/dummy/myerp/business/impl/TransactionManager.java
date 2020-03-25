@@ -11,13 +11,25 @@ import org.springframework.transaction.support.DefaultTransactionDefinition;
 public class TransactionManager {
 
     // ==================== Attributs Static ====================
-    /** PlatformTransactionManager pour le DataSource MyERP */
-    private static PlatformTransactionManager ptmMyERP;
+    /**
+     * Instance unique de la classe (design pattern Singleton)
+     */
+    private static final TransactionManager INSTANCE = new TransactionManager();
 
 
     // ==================== Constructeurs ====================
-    /** Instance unique de la classe (design pattern Singleton) */
-    private static final TransactionManager INSTANCE = new TransactionManager();
+    /**
+     * PlatformTransactionManager pour le DataSource MyERP
+     */
+    private static PlatformTransactionManager ptmMyERP;
+
+    /**
+     * Constructeur.
+     */
+    protected TransactionManager() {
+        super();
+    }
+
     /**
      * Renvoie l'instance unique de la classe (design pattern Singleton).
      *
@@ -26,6 +38,7 @@ public class TransactionManager {
     public static TransactionManager getInstance() {
         return TransactionManager.INSTANCE;
     }
+
     /**
      * Renvoie l'instance unique de la classe (design pattern Singleton).
      *
@@ -36,23 +49,18 @@ public class TransactionManager {
         ptmMyERP = pPtmMyERP;
         return TransactionManager.INSTANCE;
     }
-    /**
-     * Constructeur.
-     */
-    protected TransactionManager() {
-        super();
-    }
 
 
     // ==================== Méthodes ====================
+
     /**
      * Démarre une transaction sur le DataSource MyERP
      *
      * @return TransactionStatus à passer aux méthodes :
-     *      <ul>
-     *          <li>{@link #commitMyERP(TransactionStatus)}</li>
-     *              <li>{@link #rollbackMyERP(TransactionStatus)}</li>
-     *      </ul>
+     * <ul>
+     *     <li>{@link #commitMyERP(TransactionStatus)}</li>
+     *         <li>{@link #rollbackMyERP(TransactionStatus)}</li>
+     * </ul>
      */
     public TransactionStatus beginTransactionMyERP() {
         DefaultTransactionDefinition vTDef = new DefaultTransactionDefinition();

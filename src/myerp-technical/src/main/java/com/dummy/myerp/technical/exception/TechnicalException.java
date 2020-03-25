@@ -5,11 +5,14 @@ package com.dummy.myerp.technical.exception;
  */
 public class TechnicalException extends Exception {
 
-    /** serialVersionUID */
+    /**
+     * serialVersionUID
+     */
     private static final long serialVersionUID = 1L;
 
 
     // ==================== Constructeurs ====================
+
     /**
      * Constructeur.
      *
@@ -32,7 +35,7 @@ public class TechnicalException extends Exception {
      * Constructeur.
      *
      * @param pMessage -
-     * @param pCause -
+     * @param pCause   -
      */
     public TechnicalException(String pMessage, Throwable pCause) {
         super(pMessage, pCause);

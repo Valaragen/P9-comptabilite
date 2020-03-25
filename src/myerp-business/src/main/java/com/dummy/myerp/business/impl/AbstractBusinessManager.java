@@ -1,12 +1,12 @@
 package com.dummy.myerp.business.impl;
 
+import com.dummy.myerp.business.contrat.BusinessProxy;
+import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
+
 import javax.validation.Configuration;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
-
-import com.dummy.myerp.business.contrat.BusinessProxy;
-import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
 
 
 /**
@@ -14,11 +14,17 @@ import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
  */
 public abstract class AbstractBusinessManager {
 
-    /** Le Proxy d'accès à la couche Business */
+    /**
+     * Le Proxy d'accès à la couche Business
+     */
     private static BusinessProxy businessProxy;
-    /** Le Proxy d'accès à la couche Consumer-DAO */
+    /**
+     * Le Proxy d'accès à la couche Consumer-DAO
+     */
     private static DaoProxy daoProxy;
-    /** Le gestionnaire de Transaction */
+    /**
+     * Le gestionnaire de Transaction
+     */
     private static TransactionManager transactionManager;
 
 

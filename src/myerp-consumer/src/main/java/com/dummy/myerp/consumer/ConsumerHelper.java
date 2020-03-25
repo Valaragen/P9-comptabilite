@@ -8,15 +8,18 @@ import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
  */
 public abstract class ConsumerHelper {
 
-    /** Le DaoProxy à utiliser pour accéder aux autres classes de DAO */
+    /**
+     * Le DaoProxy à utiliser pour accéder aux autres classes de DAO
+     */
     private static DaoProxy daoProxy;
 
 
     // ==================== Constructeurs ====================
+
     /**
      * Méthode de configuration de la classe
      *
-     * @param pDaoProxy     -
+     * @param pDaoProxy -
      */
     public static void configure(DaoProxy pDaoProxy) {
         daoProxy = pDaoProxy;

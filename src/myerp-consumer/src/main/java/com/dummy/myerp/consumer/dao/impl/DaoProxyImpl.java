@@ -10,13 +10,24 @@ import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
 public final class DaoProxyImpl implements DaoProxy {
 
     // ==================== Attributs ====================
-    /** {@link ComptabiliteDao} */
-    private ComptabiliteDao comptabiliteDao;
+    /**
+     * Instance unique de la classe (design pattern Singleton)
+     */
+    private static final DaoProxyImpl INSTANCE = new DaoProxyImpl();
 
 
     // ==================== Constructeurs ====================
-    /** Instance unique de la classe (design pattern Singleton) */
-    private static final DaoProxyImpl INSTANCE = new DaoProxyImpl();
+    /**
+     * {@link ComptabiliteDao}
+     */
+    private ComptabiliteDao comptabiliteDao;
+
+    /**
+     * Constructeur.
+     */
+    private DaoProxyImpl() {
+        super();
+    }
 
     /**
      * Renvoie l'instance unique de la classe (design pattern Singleton).
@@ -27,18 +38,11 @@ public final class DaoProxyImpl implements DaoProxy {
         return DaoProxyImpl.INSTANCE;
     }
 
-    /**
-     * Constructeur.
-     */
-    private DaoProxyImpl() {
-        super();
-    }
-
-
     // ==================== Getters/Setters ====================
     public ComptabiliteDao getComptabiliteDao() {
         return this.comptabiliteDao;
     }
+
     public void setComptabiliteDao(ComptabiliteDao pComptabiliteDao) {
         this.comptabiliteDao = pComptabiliteDao;
     }
