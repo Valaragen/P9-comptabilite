@@ -1,0 +1,16 @@
+
+com.dummy.myerp.business.impl.AbstractBusinessManager#getTransactionManager()Lcom/dummy/myerp/business/impl/TransactionManager;€
+vD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/AbstractBusinessManager.javaL! L(6"1*à
+1€
+vD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/AbstractBusinessManager.javaM M(!—
+”
+€
+vD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/AbstractBusinessManager.javaM M(!6
+%00com.dummy.myerp.business.impl.TransactionManager"__id*Q*O7
+5com.dummy.myerp.business.impl.AbstractBusinessManager"
+transactionManager"½
+€
+vD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/AbstractBusinessManager.javaM M("8
+6
+%00com.dummy.myerp.business.impl.TransactionManagerB97
+5com.dummy.myerp.business.impl.AbstractBusinessManager

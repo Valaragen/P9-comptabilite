@@ -1,4 +1,48 @@
 package com.dummy.myerp.model.bean.comptabilite;
 
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CompteComptableTest {
+
+    private CompteComptable objectToTest;
+    private CompteComptable fournisseur = new CompteComptable(4081, "Fournisseurs");
+    private CompteComptable clientVentes = new CompteComptable(4111, "Clients - Ventes de biens ou de prestations de services");
+    private CompteComptable clientAvances = new CompteComptable(4191, "Clients - Avances et acomptes reçus sur commandes");
+    private List<CompteComptable> compteComptableList = new ArrayList<>();
+
+    @BeforeEach
+    void init() {
+        compteComptableList.add(fournisseur);
+        compteComptableList.add(clientVentes);
+        compteComptableList.add(clientAvances);
+    }
+
+    @Test
+    void newInstance() {
+        int numero = 1000;
+
+        objectToTest = new CompteComptable(numero);
+
+        Assertions.assertThat(objectToTest.getNumero()).isEqualTo(numero);
+    }
+
+    @Test
+    void getByNumero_giveAnExistingCompteNumber_returnTheAssociatedCompteComptable() {
+        objectToTest = CompteComptable.getByNumero(compteComptableList, 4081);
+
+        Assertions.assertThat(objectToTest).isEqualTo(fournisseur);
+    }
+
+    @Test
+    void getByNumero_giveANonExistingCompteNumber_returnNull() {
+        objectToTest = CompteComptable.getByNumero(compteComptableList, 1000);
+
+        Assertions.assertThat(objectToTest).isNull();
+    }
+
 }

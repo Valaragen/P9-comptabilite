@@ -36,6 +36,7 @@
     <!-- Properties -->
     <!-- =============================================================== -->
     <properties>
+        <sonar.projectKey>Valaragen_P9-comptabilite-consumer</sonar.projectKey>
     </properties>
 
 
@@ -62,13 +63,27 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <scope>test</scope>
+        </dependency>
 
         <!-- ===== Database (pour les tests) ===== -->
         <!-- Pool de connexion -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-dbcp2</artifactId>
-            <scope>test</scope>
         </dependency>
         <!-- Drivers JDBC PostgreSQL -->
         <dependency>

@@ -5,6 +5,7 @@ import com.dummy.myerp.model.validation.constraint.MontantComptable;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 
 /**
@@ -81,7 +82,10 @@ public class LigneEcritureComptable {
     }
 
     public BigDecimal getDebit() {
-        return debit;
+        if (debit == null) {
+            return null;
+        }
+        return debit.setScale(2, RoundingMode.DOWN);
     }
 
     public void setDebit(BigDecimal pDebit) {
@@ -89,11 +93,14 @@ public class LigneEcritureComptable {
     }
 
     public BigDecimal getCredit() {
-        return credit;
+        if (credit == null) {
+            return null;
+        }
+        return credit.setScale(2, RoundingMode.DOWN);
     }
 
     public void setCredit(BigDecimal pCredit) {
-        credit = pCredit;
+        credit = pCredit.setScale(2, RoundingMode.FLOOR);
     }
 
 

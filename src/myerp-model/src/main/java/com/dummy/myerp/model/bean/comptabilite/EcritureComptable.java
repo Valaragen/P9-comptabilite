@@ -112,7 +112,7 @@ public class EcritureComptable {
                 vRetour = vRetour.add(vLigneEcritureComptable.getDebit());
             }
         }
-        return vRetour.setScale(2, RoundingMode.FLOOR);
+        return vRetour;
     }
 
     /**
@@ -121,13 +121,7 @@ public class EcritureComptable {
      * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au crédit
      */
     public BigDecimal getTotalCredit() {
-        BigDecimal vRetour = BigDecimal.ZERO;
-        for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {
-            if (vLigneEcritureComptable.getCredit() != null) {
-                vRetour = vRetour.add(vLigneEcritureComptable.getCredit());
-            }
-        }
-        return vRetour.setScale(2, RoundingMode.FLOOR);
+        return listLigneEcriture.stream().filter(e -> e.getCredit() != null).map(LigneEcritureComptable::getCredit).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
     }
 
     /**

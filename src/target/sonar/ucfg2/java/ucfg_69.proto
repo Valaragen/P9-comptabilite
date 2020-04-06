@@ -1,0 +1,42 @@
+
+Ïcom.dummy.myerp.business.impl.BusinessProxyImpl#getInstance(Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;Lcom/dummy/myerp/business/impl/TransactionManager;)Lcom/dummy/myerp/business/impl/BusinessProxyImpl;z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java<$ <(/"1*­
+1z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java> >(„
+
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java> >(?1
+/com.dummy.myerp.business.impl.BusinessProxyImpl"
+
+daoProxy"__id*<
+:
+	pDaoProxy-com.dummy.myerp.consumer.dao.contrat.DaoProxyÄ
+Á
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java?* ?(D5
+%0/com.dummy.myerp.business.impl.BusinessProxyImpl"__id*
+""Þ
+Û
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java? ?(e
+
+%1void"Ócom.dummy.myerp.business.impl.AbstractBusinessManager#configure(Lcom/dummy/myerp/business/contrat/BusinessProxy;Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;Lcom/dummy/myerp/business/impl/TransactionManager;)V*9"7
+5com.dummy.myerp.business.impl.AbstractBusinessManager*7
+5
+%0/com.dummy.myerp.business.impl.BusinessProxyImpl*<
+:
+	pDaoProxy-com.dummy.myerp.consumer.dao.contrat.DaoProxy*I
+G
+pTransactionManager0com.dummy.myerp.business.impl.TransactionManagerÄ
+Á
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java@ @()5
+%2/com.dummy.myerp.business.impl.BusinessProxyImpl"__id*
+"""µ
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.java@ @(*7
+5
+%2/com.dummy.myerp.business.impl.BusinessProxyImpl::
+	pDaoProxy-com.dummy.myerp.consumer.dao.contrat.DaoProxy:G
+pTransactionManager0com.dummy.myerp.business.impl.TransactionManagerB3"1
+/com.dummy.myerp.business.impl.BusinessProxyImpl

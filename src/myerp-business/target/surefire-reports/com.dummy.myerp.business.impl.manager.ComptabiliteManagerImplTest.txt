@@ -1,0 +1,43 @@
+-------------------------------------------------------------------------------
+Test set: com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 0.584 s <<< FAILURE! - in com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest
+com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitViolation  Time elapsed: 0.563 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <com.dummy.myerp.technical.exception.FunctionalException> but was: <javax.validation.ValidationException>
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitViolation(ComptabiliteManagerImplTest.java:38)
+Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitViolation$0(ComptabiliteManagerImplTest.java:41)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitViolation(ComptabiliteManagerImplTest.java:38)
+Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitViolation$0(ComptabiliteManagerImplTest.java:41)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitViolation(ComptabiliteManagerImplTest.java:38)
+Caused by: java.lang.ClassNotFoundException: javax.el.ELManager
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitViolation$0(ComptabiliteManagerImplTest.java:41)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitViolation(ComptabiliteManagerImplTest.java:38)
+
+com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG2  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <com.dummy.myerp.technical.exception.FunctionalException> but was: <javax.validation.ValidationException>
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG2(ComptabiliteManagerImplTest.java:47)
+Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitRG2$1(ComptabiliteManagerImplTest.java:59)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG2(ComptabiliteManagerImplTest.java:47)
+Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitRG2$1(ComptabiliteManagerImplTest.java:59)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG2(ComptabiliteManagerImplTest.java:47)
+
+com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG3  Time elapsed: 0.002 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown ==> expected: <com.dummy.myerp.technical.exception.FunctionalException> but was: <javax.validation.ValidationException>
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG3(ComptabiliteManagerImplTest.java:65)
+Caused by: javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitRG3$2(ComptabiliteManagerImplTest.java:77)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG3(ComptabiliteManagerImplTest.java:65)
+Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.lambda$checkEcritureComptableUnitRG3$2(ComptabiliteManagerImplTest.java:77)
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnitRG3(ComptabiliteManagerImplTest.java:65)
+
+com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnit  Time elapsed: 0.001 s  <<< ERROR!
+javax.validation.ValidationException: HV000183: Unable to initialize 'javax.el.ExpressionFactory'. Check that you have the EL dependencies on the classpath, or use ParameterMessageInterpolator instead
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnit(ComptabiliteManagerImplTest.java:33)
+Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager
+	at com.dummy.myerp.business.impl.manager.ComptabiliteManagerImplTest.checkEcritureComptableUnit(ComptabiliteManagerImplTest.java:33)
+
