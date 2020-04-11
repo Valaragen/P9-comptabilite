@@ -46,7 +46,7 @@ public abstract class AbstractDbConsumer {
      *
      * @return {@link DaoProxy}
      */
-    protected static DaoProxy getDaoProxy() {
+    public static DaoProxy getDaoProxy() {
         return ConsumerHelper.getDaoProxy();
     }
 

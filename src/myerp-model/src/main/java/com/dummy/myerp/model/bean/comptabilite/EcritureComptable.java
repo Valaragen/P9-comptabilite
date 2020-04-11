@@ -20,7 +20,6 @@ import java.util.List;
  * Bean représentant une Écriture Comptable
  */
 public class EcritureComptable {
-    private static final Logger log = LoggerFactory.getLogger(EcritureComptable.class);
 
     // ==================== Attributs ====================
     /**
@@ -106,13 +105,10 @@ public class EcritureComptable {
      * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au débit
      */
     public BigDecimal getTotalDebit() {
-        BigDecimal vRetour = BigDecimal.ZERO;
-        for (LigneEcritureComptable vLigneEcritureComptable : listLigneEcriture) {
-            if (vLigneEcritureComptable.getDebit() != null) {
-                vRetour = vRetour.add(vLigneEcritureComptable.getDebit());
-            }
-        }
-        return vRetour;
+        return listLigneEcriture.stream().filter(e -> e.getDebit() != null)
+                .map(LigneEcritureComptable::getDebit)
+                .reduce(BigDecimal::add)
+                .orElse(BigDecimal.ZERO);
     }
 
     /**
@@ -121,7 +117,10 @@ public class EcritureComptable {
      * @return {@link BigDecimal}, {@link BigDecimal#ZERO} si aucun montant au crédit
      */
     public BigDecimal getTotalCredit() {
-        return listLigneEcriture.stream().filter(e -> e.getCredit() != null).map(LigneEcritureComptable::getCredit).reduce(BigDecimal::add).orElse(BigDecimal.ZERO);
+        return listLigneEcriture.stream().filter(e -> e.getCredit() != null)
+                .map(LigneEcritureComptable::getCredit)
+                .reduce(BigDecimal::add)
+                .orElse(BigDecimal.ZERO);
     }
 
     /**
@@ -130,7 +129,7 @@ public class EcritureComptable {
      * @return boolean
      */
     public boolean isEquilibree() {
-        return this.getTotalDebit().equals(getTotalCredit());
+        return getTotalDebit().equals(getTotalCredit());
     }
 
     // ==================== Méthodes ====================

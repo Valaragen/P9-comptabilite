@@ -2,20 +2,23 @@ package com.dummy.myerp.model.bean.comptabilite;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Tag("JournalComptableTest")
 public class JournalComptableTest {
 
     private JournalComptable JCBanque = new JournalComptable("BQ", "Banque");
     private JournalComptable JCOperationsDiverses = new JournalComptable("OP", "Opérations diverses");
 
-    private List<JournalComptable> journalComptableList = new ArrayList<>();
+    private List<JournalComptable> journalComptableList;
 
     @BeforeEach
     void init() {
+        journalComptableList = new ArrayList<>();
         journalComptableList.add(JCBanque);
         journalComptableList.add(JCOperationsDiverses);
     }
