@@ -1,7 +1,6 @@
 package com.dummy.myerp.business.impl;
 
 import com.dummy.myerp.business.util.Constant;
-import com.dummy.myerp.consumer.ComptabiliteManagerImpl;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
 import com.dummy.myerp.model.bean.comptabilite.JournalComptable;

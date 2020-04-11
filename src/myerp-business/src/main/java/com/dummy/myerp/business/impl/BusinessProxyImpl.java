@@ -2,7 +2,6 @@ package com.dummy.myerp.business.impl;
 
 import com.dummy.myerp.business.contrat.BusinessProxy;
 import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
-import com.dummy.myerp.consumer.ComptabiliteManagerImpl;
 import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
 
 

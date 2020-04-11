@@ -1,4 +1,4 @@
-package com.dummy.myerp.consumer;
+package com.dummy.myerp.business.impl;
 
 import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
 import com.dummy.myerp.business.impl.AbstractBusinessManager;

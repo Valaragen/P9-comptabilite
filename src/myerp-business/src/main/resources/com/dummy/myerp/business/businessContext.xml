@@ -14,7 +14,7 @@
         <constructor-arg ref="transactionManager"/>
     </bean>
 
-    <bean id="comptabiliteManager" class="com.dummy.myerp.consumer.ComptabiliteManagerImpl"/>
+    <bean id="comptabiliteManager" class="com.dummy.myerp.business.impl.ComptabiliteManagerImpl"/>
 
     <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
         <property name="targetClass" value="com.dummy.myerp.business.impl.AbstractBusinessManager"/>
