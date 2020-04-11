@@ -5,8 +5,6 @@
 
     <!-- Inclusion d'autres fichiers de contexte Spring -->
     <import resource="classpath:/com/dummy/myerp/business/businessContext.xml"/>
-    <import resource="classpath:/com/dummy/myerp/business/transactionContext.xml"/>
     <import resource="classpath:/com/dummy/myerp/consumer/consumerContext.xml"/>
-    <import resource="classpath:/com/dummy/myerp/consumer/sqlContext.xml"/>
 
 </beans>
