@@ -1,3 +1,4 @@
 language: java
 
-before_script: cd src
+before_script:
+  - cd src
