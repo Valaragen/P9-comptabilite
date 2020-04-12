@@ -1,6 +1,7 @@
 package com.dummy.myerp.model.bean.comptabilite;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -9,42 +10,49 @@ import java.math.BigDecimal;
 @Tag("LigneEcritureComptableTest")
 public class LigneEcritureComptableTest {
 
+    LigneEcritureComptable objectToTest;
+
+    @BeforeEach
+    void init() {
+        objectToTest = new LigneEcritureComptable(new CompteComptable(1, "test"), "test", new BigDecimal("200"), new BigDecimal("200"));
+    }
+
     @Test
+    @Tag("RG")
+    @Tag("RG_Compta_7")
     void getDebit_notNullDebit_returnDebitWith2Decimals() {
-        BigDecimal debitValue = new BigDecimal("100");
+        BigDecimal debitValue = new BigDecimal("100.00864");
         BigDecimal expectedResult = new BigDecimal("100.00");
 
-        LigneEcritureComptable ligneEcritureComptable = new LigneEcritureComptable(new CompteComptable(1, "test"), "test", debitValue, new BigDecimal("200"));
+        objectToTest.setDebit(debitValue);
 
-        Assertions.assertThat(ligneEcritureComptable.getDebit()).isEqualTo(expectedResult);
+        Assertions.assertThat(objectToTest.getDebit()).isEqualTo(expectedResult);
     }
 
     @Test
     void getDebit_nullDebit_returnNull() {
-        BigDecimal debitValue = null;
+        objectToTest.setDebit(null);
 
-        LigneEcritureComptable ligneEcritureComptable = new LigneEcritureComptable(new CompteComptable(1, "test"), "test", debitValue, new BigDecimal("200"));
-
-        Assertions.assertThat(ligneEcritureComptable.getDebit()).isNull();
+        Assertions.assertThat(objectToTest.getDebit()).isNull();
     }
 
     @Test
+    @Tag("RG")
+    @Tag("RG_Compta_7")
     void getCredit_NotNullCredit_returnCreditWith2Decimals() {
-        BigDecimal creditValue = new BigDecimal("100");
+        BigDecimal creditValue = new BigDecimal("100.00864");
         BigDecimal expectedResult = new BigDecimal("100.00");
 
-        LigneEcritureComptable ligneEcritureComptable = new LigneEcritureComptable(new CompteComptable(1, "test"), "test", new BigDecimal("100"), creditValue);
+        objectToTest.setCredit(creditValue);
 
-        Assertions.assertThat(ligneEcritureComptable.getCredit()).isEqualTo(expectedResult);
+        Assertions.assertThat(objectToTest.getCredit()).isEqualTo(expectedResult);
     }
 
     @Test
     void getCredit_nullCredit_returnNull() {
-        BigDecimal creditValue = null;
+        objectToTest.setCredit(null);
 
-        LigneEcritureComptable ligneEcritureComptable = new LigneEcritureComptable(new CompteComptable(1, "test"), "test", new BigDecimal("100"), creditValue);
-
-        Assertions.assertThat(ligneEcritureComptable.getCredit()).isNull();
+        Assertions.assertThat(objectToTest.getCredit()).isNull();
     }
 
 

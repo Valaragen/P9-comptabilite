@@ -100,7 +100,7 @@ public class LigneEcritureComptable {
     }
 
     public void setCredit(BigDecimal pCredit) {
-        credit = pCredit.setScale(2, RoundingMode.FLOOR);
+        credit = pCredit;
     }
 
 

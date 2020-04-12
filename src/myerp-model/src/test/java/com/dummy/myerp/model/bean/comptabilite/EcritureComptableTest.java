@@ -37,6 +37,8 @@ class EcritureComptableTest {
             "10, 5, 15.00",
             "10.1, -0.1, 10.00"
     })
+    @Tag("RG")
+    @Tag("RG_Compta_2")
     @DisplayName("GetTotalDebit() should return the correct result with two decimal places")
     void getTotalDebit_addTwoDebit_returnTheirSumFormatted(String value1, String value2, BigDecimal expectedResult) {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, value1, null));
