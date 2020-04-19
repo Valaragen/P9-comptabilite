@@ -3,6 +3,7 @@ package com.dummy.myerp.consumer.dao.impl.db.dao;
 import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
 import com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite.CompteComptableRM;
 import com.dummy.myerp.consumer.db.AbstractDbConsumer;
+import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.technical.exception.NotFoundException;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.AfterEach;
@@ -13,31 +14,17 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(locations = {"classpath:/com/dummy/myerp/consumer/sqlContext.xml"})
-public class ComptabiliteDaoImplTest {
-
-    private String SQLgetListCompteComptable;
-    private String SQLgetListJournalComptable;
-    private String SQLgetListEcritureComptable;
-    private static String SQLgetEcritureComptable;
-    private static String SQLgetEcritureComptableByRef;
-    private static String SQLloadListLigneEcriture;
-    private static String SQLinsertEcritureComptable;
-    private static String SQLinsertListLigneEcritureComptable;
-    private static String SQLupdateEcritureComptable;
-    private static String SQLdeleteEcritureComptable;
-    private static String SQLdeleteListLigneEcritureComptable;
-    private static String SQLgetSequenceEcritureComptableByAnneeAndJournalCode;
-    private String SQLinsertSequenceEcritureComptable;
-    private String SQLupdateSequenceEcritureComptable;
-    private String SQLdeleteSequenceEcritureComptable;
-
-    @Mock
-    private JdbcTemplate jdbcTemplate;
+@ContextConfiguration(locations = {"classpath:/com/dummy/myerp/consumer/consumerContext.xml"})
+public class ComptabiliteDaoImplIT {
 
     private ComptabiliteDao objectToTest;
 
@@ -46,10 +33,6 @@ public class ComptabiliteDaoImplTest {
         objectToTest = ComptabiliteDaoImpl.getInstance();
     }
 
-    @AfterEach
-    void clear() {
-        Mockito.reset(jdbcTemplate);
-    }
 
     @Test
     void applicationContextTest() {
@@ -62,12 +45,14 @@ public class ComptabiliteDaoImplTest {
     }
 
     @Test
-    @Disabled
     void getListCompteComptable_shouldQueryWithGoodArgument_whenMethodIsCalled() {
 
-        objectToTest.getListCompteComptable();
+        List<CompteComptable> result = objectToTest.getListCompteComptable();
 
-        Mockito.verify(jdbcTemplate).query(SQLgetListCompteComptable, new CompteComptableRM());
+        List<Integer> resultCompteComptablesNumero = result.stream().map(CompteComptable::getNumero).collect(Collectors.toList());
+        Assertions.assertThat(resultCompteComptablesNumero).contains(401, 411, 4456, 4457, 512, 606, 706);
+        List<String> resultCompteComptablesLibelle = result.stream().map(CompteComptable::getLibelle).collect(Collectors.toList());
+        Assertions.assertThat(resultCompteComptablesLibelle).contains("Fournisseurs", "Clients", "Taxes sur le chiffre d'affaires déductibles", "Taxes sur le chiffre d'affaires collectées par l'entreprise", "Banque", "Achats non stockés de matières et fournitures", "Prestations de services");
     }
 
     @Test
