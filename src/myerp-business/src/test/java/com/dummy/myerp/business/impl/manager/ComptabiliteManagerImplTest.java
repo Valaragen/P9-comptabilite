@@ -2,6 +2,7 @@ package com.dummy.myerp.business.impl.manager;
 
 import com.dummy.myerp.business.config.BusinessContextBeansTest;
 import com.dummy.myerp.business.contrat.BusinessProxy;
+import com.dummy.myerp.business.impl.AbstractBusinessManager;
 import com.dummy.myerp.business.impl.TransactionManager;
 import com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl;
 import com.dummy.myerp.business.util.Constant;
@@ -48,6 +49,7 @@ public class ComptabiliteManagerImplTest {
     @Autowired
     private ComptabiliteDao comptabiliteDao;
 
+
     private ComptabiliteManagerImpl objectToTest;
 
     private EcritureComptable sampleEcritureComptable;
@@ -76,11 +78,6 @@ public class ComptabiliteManagerImplTest {
         Mockito.reset(daoProxy);
         Mockito.reset(comptabiliteDao);
         Mockito.reset(transactionManager);
-    }
-
-    @Test
-    void getBusinessProxyTest() {
-
     }
 
     @Test

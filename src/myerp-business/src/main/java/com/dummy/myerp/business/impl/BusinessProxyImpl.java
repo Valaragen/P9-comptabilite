@@ -3,6 +3,7 @@ package com.dummy.myerp.business.impl;
 import com.dummy.myerp.business.contrat.BusinessProxy;
 import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
 import com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl;
+import com.dummy.myerp.business.util.Constant;
 import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
 
 
@@ -45,7 +46,7 @@ public class BusinessProxyImpl implements BusinessProxy {
      */
     public static BusinessProxyImpl getInstance() {
         if (daoProxy == null) {
-            throw new UnsatisfiedLinkError("La classe BusinessProxyImpl n'a pas été initialisée.");
+            throw new UnsatisfiedLinkError(Constant.BUSINESS_PROXY_NOT_INTIALIZED);
         }
         return BusinessProxyImpl.INSTANCE;
     }
