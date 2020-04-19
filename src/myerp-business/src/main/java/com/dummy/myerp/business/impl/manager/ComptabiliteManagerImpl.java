@@ -3,10 +3,7 @@ package com.dummy.myerp.business.impl.manager;
 import com.dummy.myerp.business.contrat.manager.ComptabiliteManager;
 import com.dummy.myerp.business.impl.AbstractBusinessManager;
 import com.dummy.myerp.business.util.Constant;
-import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
-import com.dummy.myerp.model.bean.comptabilite.EcritureComptable;
-import com.dummy.myerp.model.bean.comptabilite.JournalComptable;
-import com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable;
+import com.dummy.myerp.model.bean.comptabilite.*;
 import com.dummy.myerp.technical.exception.FunctionalException;
 import com.dummy.myerp.technical.exception.NotFoundException;
 import org.apache.commons.lang3.ObjectUtils;
@@ -64,8 +61,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
      */
     // TODO à tester
     @Override
-    public synchronized void addReference(EcritureComptable pEcritureComptable) {
-        // TODO à implémenter
+    public synchronized void addReference(EcritureComptable pEcritureComptable) throws FunctionalException {
         // Bien se réferer à la JavaDoc de cette méthode !
         /* Le principe :
                 1.  Remonter depuis la persitance la dernière valeur de la séquence du journal pour l'année de l'écriture
@@ -78,6 +74,41 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
                 4.  Enregistrer (insert/update) la valeur de la séquence en persitance
                     (table sequence_ecriture_comptable)
          */
+        if(pEcritureComptable.getDate() == null) {
+            throw new FunctionalException(Constant.ECRITURE_COMPTABLE_DATE_NULL_FOR_ADD_REFERENCE);
+        }
+        if(pEcritureComptable.getJournal() == null || pEcritureComptable.getJournal().getCode() == null) {
+            throw new FunctionalException(Constant.ECRITURE_COMPTABLE_JOURNAL_NULL_FOR_ADD_REFERENCE);
+        }
+
+        LocalDate ecritureDate = pEcritureComptable.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        SequenceEcritureComptable sequenceEcritureComptable;
+        boolean isSequenceAlreadyExist = true;
+        try {
+            sequenceEcritureComptable = getDaoProxy().getComptabiliteDao().getLastSequenceByYearAndJournalCode(ecritureDate.getYear(), pEcritureComptable.getJournal().getCode());
+        } catch (NotFoundException e) {
+            sequenceEcritureComptable = new SequenceEcritureComptable(ecritureDate.getYear(), pEcritureComptable.getJournal(), 0);
+            isSequenceAlreadyExist = false;
+        }
+
+        sequenceEcritureComptable.setDerniereValeur(sequenceEcritureComptable.getDerniereValeur() + 1);
+        StringBuilder formattedSequenceNumberBuilder = new StringBuilder(sequenceEcritureComptable.getDerniereValeur().toString());
+        while (formattedSequenceNumberBuilder.length() < 5) {
+            formattedSequenceNumberBuilder.insert(0, "0");
+        }
+        String formattedSequenceNumber = formattedSequenceNumberBuilder.toString();
+
+        String reference = sequenceEcritureComptable.getJournal().getCode() + "-" + sequenceEcritureComptable.getAnnee().toString() + "/" + formattedSequenceNumber;
+        pEcritureComptable.setReference(reference);
+
+        if(isSequenceAlreadyExist) {
+            getDaoProxy().getComptabiliteDao().updateSequenceEcritureComptable(sequenceEcritureComptable);
+        } else {
+            getDaoProxy().getComptabiliteDao().insertNewSequence(sequenceEcritureComptable);
+        }
+
+        pEcritureComptable.setReference(reference);
+
     }
 
     /**
@@ -132,13 +163,13 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
         }
 
         // ===== RG_Compta_5 : vérifier que l'année dans la référence correspond bien à la date de l'écriture, idem pour le code journal...
-        String refJournalCode = pEcritureComptable.getReference().substring(0,2);
-        String refDateYear = pEcritureComptable.getReference().substring(3,7);
+        String refJournalCode = pEcritureComptable.getReference().substring(0, 2);
+        String refDateYear = pEcritureComptable.getReference().substring(3, 7);
         LocalDate ecritureDate = pEcritureComptable.getDate().toInstant()
                 .atZone(ZoneId.systemDefault())
                 .toLocalDate();
         int ecritureDateYear = ecritureDate.getYear();
-        if(!refJournalCode.equals(pEcritureComptable.getJournal().getCode()) || !refDateYear.equals(Integer.toString(ecritureDateYear))) {
+        if (!refJournalCode.equals(pEcritureComptable.getJournal().getCode()) || !refDateYear.equals(Integer.toString(ecritureDateYear))) {
             throw new FunctionalException(Constant.RG_COMPTA_5_VIOLATION_ERRORMSG);
         }
     }
@@ -181,10 +212,13 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
         TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();
         try {
             getDaoProxy().getComptabiliteDao().insertEcritureComptable(pEcritureComptable);
-            getTransactionManager().commitMyERP(vTS);
+            TransactionStatus vTSCommit = vTS;
             vTS = null;
+            getTransactionManager().commitMyERP(vTSCommit);
         } finally {
-            getTransactionManager().rollbackMyERP(vTS);
+            if (vTS != null) {
+                getTransactionManager().rollbackMyERP(vTS);
+            }
         }
     }
 
@@ -193,13 +227,17 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
      */
     @Override
     public void updateEcritureComptable(EcritureComptable pEcritureComptable) throws FunctionalException {
+        this.checkEcritureComptable(pEcritureComptable);
         TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();
         try {
             getDaoProxy().getComptabiliteDao().updateEcritureComptable(pEcritureComptable);
-            getTransactionManager().commitMyERP(vTS);
+            TransactionStatus vTSCommit = vTS;
             vTS = null;
+            getTransactionManager().commitMyERP(vTSCommit);
         } finally {
-            getTransactionManager().rollbackMyERP(vTS);
+            if (vTS != null) {
+                getTransactionManager().rollbackMyERP(vTS);
+            }
         }
     }
 
@@ -211,10 +249,13 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
         TransactionStatus vTS = getTransactionManager().beginTransactionMyERP();
         try {
             getDaoProxy().getComptabiliteDao().deleteEcritureComptable(pId);
-            getTransactionManager().commitMyERP(vTS);
+            TransactionStatus vTSCommit = vTS;
             vTS = null;
+            getTransactionManager().commitMyERP(vTSCommit);
         } finally {
-            getTransactionManager().rollbackMyERP(vTS);
+            if (vTS != null) {
+                getTransactionManager().rollbackMyERP(vTS);
+            }
         }
     }
 }
