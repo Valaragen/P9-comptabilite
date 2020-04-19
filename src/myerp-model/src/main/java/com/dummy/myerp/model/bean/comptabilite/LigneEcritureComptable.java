@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Objects;
 
 
 /**
@@ -75,6 +76,22 @@ public class LigneEcritureComptable {
 
     public String getLibelle() {
         return libelle;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LigneEcritureComptable that = (LigneEcritureComptable) o;
+        return Objects.equals(compteComptable, that.compteComptable) &&
+                Objects.equals(libelle, that.libelle) &&
+                Objects.equals(debit, that.debit) &&
+                Objects.equals(credit, that.credit);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(compteComptable, libelle, debit, credit);
     }
 
     public void setLibelle(String pLibelle) {

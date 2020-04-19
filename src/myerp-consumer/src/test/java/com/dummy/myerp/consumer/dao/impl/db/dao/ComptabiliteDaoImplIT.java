@@ -1,26 +1,18 @@
 package com.dummy.myerp.consumer.dao.impl.db.dao;
 
 import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
-import com.dummy.myerp.consumer.dao.impl.db.rowmapper.comptabilite.CompteComptableRM;
 import com.dummy.myerp.consumer.db.AbstractDbConsumer;
 import com.dummy.myerp.model.bean.comptabilite.CompteComptable;
 import com.dummy.myerp.technical.exception.NotFoundException;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration(locations = {"classpath:/com/dummy/myerp/consumer/consumerContext.xml"})
@@ -45,20 +37,32 @@ public class ComptabiliteDaoImplIT {
     }
 
     @Test
-    void getListCompteComptable_shouldQueryWithGoodArgument_whenMethodIsCalled() {
+    void getListCompteComptableTest() {
 
-        List<CompteComptable> result = objectToTest.getListCompteComptable();
+        List<CompteComptable> listCompteComptable = objectToTest.getListCompteComptable();
 
-        List<Integer> resultCompteComptablesNumero = result.stream().map(CompteComptable::getNumero).collect(Collectors.toList());
-        Assertions.assertThat(resultCompteComptablesNumero).contains(401, 411, 4456, 4457, 512, 606, 706);
-        List<String> resultCompteComptablesLibelle = result.stream().map(CompteComptable::getLibelle).collect(Collectors.toList());
-        Assertions.assertThat(resultCompteComptablesLibelle).contains("Fournisseurs", "Clients", "Taxes sur le chiffre d'affaires déductibles", "Taxes sur le chiffre d'affaires collectées par l'entreprise", "Banque", "Achats non stockés de matières et fournitures", "Prestations de services");
+        Assertions.assertThat(listCompteComptable)
+                .contains(new CompteComptable(401, "Fournisseurs"),
+                new CompteComptable(411, "Clients"),
+                new CompteComptable(4456, "Taxes sur le chiffre d'affaires déductibles"),
+                new CompteComptable(4457, "Taxes sur le chiffre d'affaires collectées par l'entreprise"),
+                new CompteComptable(512, "Banque"),
+                new CompteComptable(606, "Achats non stockés de matières et fournitures"),
+                new CompteComptable(706, "Prestations de services"));
     }
 
     @Test
-    @Disabled
-    void getListJournalComptable_shouldReturnNotNullList_whenMethodIsCalled() {
-        Assertions.assertThat(objectToTest.getListJournalComptable()).isNotNull();
+    void getListJournalComptableTest() {
+        List<CompteComptable> listJournalComptables = objectToTest.getListCompteComptable();
+
+        Assertions.assertThat(listJournalComptables)
+                .contains(new CompteComptable(401, "Fournisseurs"),
+                        new CompteComptable(411, "Clients"),
+                        new CompteComptable(4456, "Taxes sur le chiffre d'affaires déductibles"),
+                        new CompteComptable(4457, "Taxes sur le chiffre d'affaires collectées par l'entreprise"),
+                        new CompteComptable(512, "Banque"),
+                        new CompteComptable(606, "Achats non stockés de matières et fournitures"),
+                        new CompteComptable(706, "Prestations de services"));
     }
 
     @Test

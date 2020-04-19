@@ -14,6 +14,7 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 
 /**
@@ -61,6 +62,24 @@ public class EcritureComptable {
 
     public void setId(Integer pId) {
         id = pId;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EcritureComptable that = (EcritureComptable) o;
+        return Objects.equals(listLigneEcriture, that.listLigneEcriture) &&
+                Objects.equals(id, that.id) &&
+                Objects.equals(journal, that.journal) &&
+                Objects.equals(reference, that.reference) &&
+                Objects.equals(date, that.date) &&
+                Objects.equals(libelle, that.libelle);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(listLigneEcriture, id, journal, reference, date, libelle);
     }
 
     public JournalComptable getJournal() {

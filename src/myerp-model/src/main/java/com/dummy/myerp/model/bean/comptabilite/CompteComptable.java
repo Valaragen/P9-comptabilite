@@ -103,4 +103,18 @@ public class CompteComptable {
                 .append("}");
         return vStB.toString();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CompteComptable that = (CompteComptable) o;
+        return Objects.equals(numero, that.numero) &&
+                Objects.equals(libelle, that.libelle);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(numero, libelle);
+    }
 }
