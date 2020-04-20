@@ -2,9 +2,7 @@ package com.dummy.myerp.business.impl.manager;
 
 import com.dummy.myerp.business.config.BusinessContextBeansTest;
 import com.dummy.myerp.business.contrat.BusinessProxy;
-import com.dummy.myerp.business.impl.AbstractBusinessManager;
 import com.dummy.myerp.business.impl.TransactionManager;
-import com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl;
 import com.dummy.myerp.business.util.Constant;
 import com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao;
 import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
@@ -129,7 +127,7 @@ public class ComptabiliteManagerImplTest {
         String expectedRef = sampleEcritureComptable.getReference();
         sampleEcritureComptable.setReference("");
         Mockito.when(daoProxy.getComptabiliteDao()).thenReturn(comptabiliteDao);
-        Mockito.when(comptabiliteDao.getLastSequenceByYearAndJournalCode(ecritureDate.getYear(), sampleEcritureComptable.getJournal().getCode())).thenThrow(NotFoundException.class);
+        Mockito.when(comptabiliteDao.getSequenceByYearAndJournalCode(ecritureDate.getYear(), sampleEcritureComptable.getJournal().getCode())).thenThrow(NotFoundException.class);
 
         objectToTest.addReference(sampleEcritureComptable);
 
@@ -144,7 +142,7 @@ public class ComptabiliteManagerImplTest {
         LocalDate ecritureDate = sampleEcritureComptable.getDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
         sampleEcritureComptable.setReference("");
         Mockito.when(daoProxy.getComptabiliteDao()).thenReturn(comptabiliteDao);
-        Mockito.when(comptabiliteDao.getLastSequenceByYearAndJournalCode(ecritureDate.getYear(), sampleEcritureComptable.getJournal().getCode())).thenReturn(sequenceEcritureComptableFound);
+        Mockito.when(comptabiliteDao.getSequenceByYearAndJournalCode(ecritureDate.getYear(), sampleEcritureComptable.getJournal().getCode())).thenReturn(sequenceEcritureComptableFound);
 
         objectToTest.addReference(sampleEcritureComptable);
 

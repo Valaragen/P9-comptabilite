@@ -52,11 +52,13 @@ public class ComptabiliteDaoImplTest {
     }
 
     @Test
+    @Disabled
     void applicationContextTest() {
         Assertions.assertThat(AbstractDbConsumer.getDaoProxy()).isNotNull();
     }
 
     @Test
+    @Disabled
     void getInstanceTest() {
         Assertions.assertThat(objectToTest).isNotNull();
     }
