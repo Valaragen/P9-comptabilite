@@ -1,6 +1,6 @@
 package com.dummy.myerp.business.impl;
 
-import com.dummy.myerp.business.config.BusinessContextBeansTest;
+import com.dummy.myerp.business.config.BusinessContextBeans;
 import com.dummy.myerp.business.contrat.BusinessProxy;
 import com.dummy.myerp.business.util.Constant;
 import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
@@ -13,7 +13,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {BusinessContextBeansTest.class})
+@ContextConfiguration(classes = {BusinessContextBeans.class})
 public class BusinessProxyImplTest {
 
     @Autowired

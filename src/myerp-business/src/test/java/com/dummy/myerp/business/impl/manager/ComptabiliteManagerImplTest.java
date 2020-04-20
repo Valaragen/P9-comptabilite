@@ -1,6 +1,6 @@
 package com.dummy.myerp.business.impl.manager;
 
-import com.dummy.myerp.business.config.BusinessContextBeansTest;
+import com.dummy.myerp.business.config.BusinessContextBeans;
 import com.dummy.myerp.business.contrat.BusinessProxy;
 import com.dummy.myerp.business.impl.TransactionManager;
 import com.dummy.myerp.business.util.Constant;
@@ -32,7 +32,7 @@ import java.util.GregorianCalendar;
 import java.util.List;
 
 @ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {BusinessContextBeansTest.class})
+@ContextConfiguration(classes = {BusinessContextBeans.class})
 public class ComptabiliteManagerImplTest {
 
     @Autowired

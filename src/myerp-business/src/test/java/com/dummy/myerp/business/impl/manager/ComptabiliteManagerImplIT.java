@@ -71,6 +71,8 @@ public class ComptabiliteManagerImplIT {
     }
 
     @Test
+    @Transactional
+    @Rollback
     void addReferenceTest() throws NotFoundException, FunctionalException {
         String expectedReference = sampleEcritureComptable.getReference();
         sampleEcritureComptable.setReference("");
