@@ -1,24 +1,16 @@
 
-hcom.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl#getListEcritureComptable()Ljava/util/List;ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java7# 7(;"1*¶
-1ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java8 8(‰†
-ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java8 8(3
-%0-com.dummy.myerp.consumer.dao.contrat.DaoProxy"rcom.dummy.myerp.business.impl.AbstractBusinessManager#getDaoProxy()Lcom/dummy/myerp/consumer/dao/contrat/DaoProxy;*A?
-=com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl2getDaoProxy()‘Ž
-ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java8 8(1:
-%14com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao"xcom.dummy.myerp.consumer.dao.contrat.DaoProxy#getComptabiliteDao()Lcom/dummy/myerp/consumer/dao/contrat/ComptabiliteDao;*5
-3
-%0-com.dummy.myerp.consumer.dao.contrat.DaoProxy2getComptabiliteDao()ßÜ
-ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java8 8(L
-%2java.util.List"_com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao#getListEcritureComptable()Ljava/util/List;*<
-:
-%14com.dummy.myerp.consumer.dao.contrat.ComptabiliteDao2getListEcritureComptable()"£
-ˆ
-~D:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/manager/ComptabiliteManagerImpl.java8 8(M
-
-%2java.util.ListBA?
-=com.dummy.myerp.business.impl.manager.ComptabiliteManagerImpl
+]com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable#getLibelle()Ljava/lang/String;†
+|D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/LigneEcritureComptable.javaM M("1*°
+1†
+|D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/LigneEcritureComptable.javaN N(û
+ø
+†
+|D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/LigneEcritureComptable.javaN N(
+%0java.lang.String"__id*O*M@
+>com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable"	
+libelle"£
+†
+|D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/LigneEcritureComptable.javaN N(
+
+%0java.lang.StringBB@
+>com.dummy.myerp.model.bean.comptabilite.LigneEcritureComptable

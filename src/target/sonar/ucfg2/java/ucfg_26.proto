@@ -1,57 +1,225 @@
 
- com.dummy.myerp.model.bean.comptabilite.JournalComptable#getByCode(Ljava/util/List;Ljava/lang/String;)Lcom/dummy/myerp/model/bean/comptabilite/JournalComptable;€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java8# 8(,"7*ë
-2€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java: :(#×
-Ô
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java: :(#A
-vBean8com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*
-""*	
+Ucom.dummy.myerp.model.bean.comptabilite.EcritureComptable#equals(Ljava/lang/Object;)Zƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaž ž("paramAnnotations*¦
+13ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java   (!™–
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java   (#
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*=;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable2
+getClass()óð
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java '  (3
+%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+
+ojava.lang.Object2
+getClass()*
+11
+12*¬
+2ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java§ §(ô
+ñ
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java§ §(&
+%18java.lang.String"__id*J*H;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"	
+libelleú
+÷
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java§( §(4
+%19java.lang.String"__id*P*N
+A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"	
+libelle§
+¤
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java§ §(5
+%20boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%18java.lang.String*
+
+%19java.lang.String*
+1*›
+15ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaŸ Ÿ(""Ž
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaŸ Ÿ(#
+""*¡
+4ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¦ ¦(ï
+ì
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¦ ¦(#
+%15java.util.Date"__id*G*E;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+dateõ
+ò
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¦% ¦(.
+%16java.util.Date"__id*M*K
+A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+date£
+ 
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¦ ¦(/
+%17boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%15java.util.Date*
+
+%16java.util.Date*
+2
+1*¶
+6ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¥ ¥(ö
+ó
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¥ ¥((
+%12java.lang.String"__id*L*J;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+	referenceü
+ù
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¥* ¥(8
+%13java.lang.String"__id*R*P
+A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+	reference§
+¤
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¥ ¥(9
+%14boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%12java.lang.String*
+
+%13java.lang.String*	
 2
 4
-1*¤
-3€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java< <(–
-“
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java< <(C
-vRetour8com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*C
+1*Ó
+8ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¤ ¤(›
+˜
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¤ ¤(&>
+%98com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*J*H;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"	
+journal¢
+Ÿ
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¤( ¤(4?
+%108com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*P*N
 A
-vBean8com.dummy.myerp.model.bean.comptabilite.JournalComptable*
-1*ü
-4€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java;! ;((ÄÁ
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java;0 ;(?
-%0java.lang.String"Tcom.dummy.myerp.model.bean.comptabilite.JournalComptable#getCode()Ljava/lang/String;*C
-A
-vBean8com.dummy.myerp.model.bean.comptabilite.JournalComptable2	getCode()¤
-¡
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java;! ;(G
-%1boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
-java.util.Objects*
-
-%0java.lang.String*
-
-pCodejava.lang.String*
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"	
+journalö
+ó
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¤ ¤(5
+%11boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*@
+>
+%98com.dummy.myerp.model.bean.comptabilite.JournalComptable*A
+?
+%108com.dummy.myerp.model.bean.comptabilite.JournalComptable*
 2
-3*ç
-7€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java9# 9('Ù
-Ö
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java9 9((C
-vRetour8com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*
-""*
-2*Ó
-1€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java@ @("Ê
-€
-vD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/JournalComptable.java@ @(E
-C
-vRetour8com.dummy.myerp.model.bean.comptabilite.JournalComptable:
-pListjava.util.List:
-pCodejava.lang.StringB<":
-8com.dummy.myerp.model.bean.comptabilite.JournalComptable
+4
+6
+1*®
+paramAnnotationsƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaž ž(#Ì
+É
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java (
+%0"
+__annotate*
+java.lang.Override*
+
+ojava.lang.Object¶
+³
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaž! ž("
+ojava.lang.Object"__annotation*
+
+%0*
+13
+15
+12*®
+10ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java£ £(ï
+ì
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java£ £(!
+%6java.lang.Integer"__id*E*C;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+idõ
+ò
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java£# £(*
+%7java.lang.Integer"__id*K*I
+A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+id¦
+£
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java£ £(+
+%8boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%6java.lang.Integer*
+
+%7java.lang.Integer*
+2
+4
+6
+8
+1*²	
+11ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¡5 ¡(6ë
+è
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¡ ¡(7A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"__id*
+
+ojava.lang.Objectû
+ø
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¢ ¢(/
+%3java.util.List"__id*T*R;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+listLigneEcriture
+þ
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¢1 ¢(G
+%4java.util.List"__id*Z*X
+A
+that9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
+listLigneEcriture 
+
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¢ ¢(H
+%5boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+java.util.Objects*
+
+%3java.util.List*
+
+%4java.util.List*
+2
+4
+6
+8
+10
+1*›
+12ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java <  (A"Ž
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java 5  (B
+""*š
+1ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¢ §(6"Ž
+ƒ
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.java¢ §(6
+"":
+ojava.lang.ObjectB=;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable

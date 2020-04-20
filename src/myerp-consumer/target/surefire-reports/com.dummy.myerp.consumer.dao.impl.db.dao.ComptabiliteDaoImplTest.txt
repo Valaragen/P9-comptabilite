@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 6, Time elapsed: 0.03 s - in com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplTest

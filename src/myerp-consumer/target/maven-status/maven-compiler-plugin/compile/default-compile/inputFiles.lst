@@ -11,4 +11,5 @@ D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\cons
 D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\consumer\db\DataSourcesEnum.java
 D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\consumer\dao\impl\db\rowmapper\comptabilite\EcritureComptableRM.java
 D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\consumer\dao\impl\cache\JournalComptableDaoCache.java
+D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\consumer\dao\impl\db\rowmapper\comptabilite\SequenceEcritureComptableRM.java
 D:\Openclassroom\9-\compta\src\myerp-consumer\src\main\java\com\dummy\myerp\consumer\dao\impl\db\dao\ComptabiliteDaoImpl.java

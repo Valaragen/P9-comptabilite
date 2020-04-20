@@ -92,14 +92,30 @@
             </properties>
         </profile>
 
-        <!-- Profile utilisé pour lancer les tests d'intégration de la couche Business -->
         <profile>
-            <id>test-business</id>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
         </profile>
-
-        <!-- Profile utilisé pour lancer les tests d'intégration de la couche Consumer -->
         <profile>
-            <id>test-consumer</id>
+            <id>failsafe</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>3.0.0-M4</version>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>integration-test</goal>
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 
@@ -298,6 +314,14 @@
                 <version>3.15.0</version>
                 <scope>test</scope>
             </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-failsafe-plugin -->
+            <dependency>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>3.0.0-M4</version>
+                <scope>test</scope>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
@@ -381,6 +405,12 @@
                     <version>3.0.0-M4</version>
                 </plugin>
 
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-failsafe-plugin</artifactId>
+                    <version>3.0.0-M4</version>
+                </plugin>
+
                 <!-- ===== Plugin d'analyse de code Checkstyle ===== -->
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -441,23 +471,6 @@
                             <goals>
                                 <goal>report</goal>
                             </goals>
-                        </execution>
-
-                        <execution>
-                            <id>merge</id>
-                            <goals>
-                                <goal>merge</goal>
-                            </goals>
-                            <configuration>
-                                <fileSets>
-                                    <fileSet implementation="org.apache.maven.shared.model.fileset.FileSet">
-                                        <directory>${project.basedir}</directory>
-                                        <includes>
-                                            <include>**/*.exec</include>
-                                        </includes>
-                                    </fileSet>
-                                </fileSets>
-                            </configuration>
                         </execution>
                     </executions>
                 </plugin>

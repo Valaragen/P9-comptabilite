@@ -1,0 +1,7 @@
+# Created at 2020-04-20T11:26:48.483
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Env\maven\repository\org\apache\maven\surefire\surefire-booter\3.0.0-M4\surefire-booter-3.0.0-M4.jar'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+
+# Created at 2020-04-20T11:26:49.774
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+

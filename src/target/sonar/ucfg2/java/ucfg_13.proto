@@ -1,16 +1,16 @@
 
-Zcom.dummy.myerp.model.bean.comptabilite.EcritureComptable#getReference()Ljava/lang/String;
-wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaK K("1*ž
+€com.dummy.myerp.model.bean.comptabilite.EcritureComptable#getJournal()Lcom/dummy/myerp/model/bean/comptabilite/JournalComptable;
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaE E(&"1*ì
 1
-wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaL L(ó
-ð
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaF F(™
+–
 
-wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaL L(
-%0java.lang.String"__id*L*J;
-9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"
-	reference"ž
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaF F(>
+%08com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*J*H;
+9com.dummy.myerp.model.bean.comptabilite.EcritureComptable"	
+journal"Æ
 
-wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaL L(
-
-%0java.lang.StringB=;
+wD:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/EcritureComptable.javaF F(@
+>
+%08com.dummy.myerp.model.bean.comptabilite.JournalComptableB=;
 9com.dummy.myerp.model.bean.comptabilite.EcritureComptable

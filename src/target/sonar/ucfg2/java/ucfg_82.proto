@@ -1,17 +1,16 @@
 
-Vcom.dummy.myerp.technical.util.spring.NullFactoryBean#getObjectType()Ljava/lang/Class;Å
-wD:/Openclassroom/9-/compta/src/myerp-technical/src/main/java/com/dummy/myerp/technical/util/spring/NullFactoryBean.java' '(!"1*ô
-1Å
-wD:/Openclassroom/9-/compta/src/myerp-technical/src/main/java/com/dummy/myerp/technical/util/spring/NullFactoryBean.java( ((Ô
-Ï
-Å
-wD:/Openclassroom/9-/compta/src/myerp-technical/src/main/java/com/dummy/myerp/technical/util/spring/NullFactoryBean.java( ((
-%0java.lang.Class"__id*I*G7
-5com.dummy.myerp.technical.util.spring.NullFactoryBean"
-
-objectType"ù
-Å
-wD:/Openclassroom/9-/compta/src/myerp-technical/src/main/java/com/dummy/myerp/technical/util/spring/NullFactoryBean.java( ((
-
-%0java.lang.ClassB97
-5com.dummy.myerp.technical.util.spring.NullFactoryBean
+Ücom.dummy.myerp.business.impl.BusinessProxyImpl#getComptabiliteManager()Lcom/dummy/myerp/business/contrat/manager/ComptabiliteManager;z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.javaF F(5"1*ﬁ
+1z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.javaG G("ó
+î
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.javaG G("B
+%0<com.dummy.myerp.business.contrat.manager.ComptabiliteManager"__id*L*J1
+/com.dummy.myerp.business.impl.BusinessProxyImpl"
+comptabiliteManager"¬
+z
+pD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/BusinessProxyImpl.javaG G(#D
+B
+%0<com.dummy.myerp.business.contrat.manager.ComptabiliteManagerB31
+/com.dummy.myerp.business.impl.BusinessProxyImpl

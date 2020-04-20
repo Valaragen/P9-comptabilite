@@ -1,7 +1,7 @@
 organization=valaragen
 projectKey=Valaragen_P9-comptabilite
 serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.6147
+serverVersion=8.0.0.6907
 dashboardUrl=https://sonarcloud.io/dashboard?id=Valaragen_P9-comptabilite
-ceTaskId=AXERj5m-EqJFuB52IzjE
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXERj5m-EqJFuB52IzjE
+ceTaskId=AXGW3EJebIw0J1b3SPYc
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXGW3EJebIw0J1b3SPYc
