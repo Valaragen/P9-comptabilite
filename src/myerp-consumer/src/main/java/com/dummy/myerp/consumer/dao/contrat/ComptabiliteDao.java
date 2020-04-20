@@ -85,7 +85,7 @@ public interface ComptabiliteDao {
      */
     void deleteEcritureComptable(Integer pId);
 
-    SequenceEcritureComptable getLastSequenceByYearAndJournalCode(Integer year, String code) throws NotFoundException;
+    SequenceEcritureComptable getSequenceByYearAndJournalCode(Integer year, String code) throws NotFoundException;
 
     void insertNewSequence(SequenceEcritureComptable sequenceEcritureComptable);
 

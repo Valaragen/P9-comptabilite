@@ -50,7 +50,9 @@
         <property name="maxOpenPreparedStatements" value="5" />
     </bean>
 
-
+    <bean id="txManagerMYERP" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSourceMYERP"/>
+    </bean>
 
 
     <!-- ========== SQL ========== -->

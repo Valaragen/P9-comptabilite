@@ -9,4 +9,5 @@ public class Constant {
     public static final String RG_COMPTA_6_VIOLATION_ERRORMSG = "RG_Compta_6 : La référence spécifié est déjà utilisée. La référence d'une écriture comptable doit être unique, il n'est pas possible de créer plusieurs écritures ayant la même référence.";
     public static final String ECRITURE_COMPTABLE_DATE_NULL_FOR_ADD_REFERENCE = "La référence ne peut pas être construite si la date de l'écriture comptable n'est pas définie";
     public static final String ECRITURE_COMPTABLE_JOURNAL_NULL_FOR_ADD_REFERENCE = "La référence ne peut pas être construite si le journal de l'écriture comptable n'est pas défini";
+    public static final String BUSINESS_PROXY_NOT_INTIALIZED = "La classe BusinessProxyImpl n'a pas été initialisée.";
 }

@@ -2,6 +2,7 @@ package com.dummy.myerp.model.bean.comptabilite;
 
 
 import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 /**
  * Bean représentant une séquence pour les références d'écriture comptable
@@ -22,6 +23,21 @@ public class SequenceEcritureComptable {
     private JournalComptable journal;
 
     // ==================== Constructeurs ====================
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        SequenceEcritureComptable that = (SequenceEcritureComptable) o;
+        return Objects.equals(annee, that.annee) &&
+                Objects.equals(derniereValeur, that.derniereValeur) &&
+                Objects.equals(journal, that.journal);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(annee, derniereValeur, journal);
+    }
 
     /**
      * Constructeur
