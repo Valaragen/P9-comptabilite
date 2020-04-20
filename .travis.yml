@@ -1,5 +1,4 @@
 language: java
-secure: "vpkYLftE80kmWy77omRvQ97Uq125VX7d8dp56WXH2hkzM+i4rwrWphdm8T83ArVcG1JSuR3MAqJmnoRmF/0f27aiCedv2+gzwokoT8q+vXLaJ3jRm0vsf+tuHBm9nmCUctp1W8YhhVCf/TeyEGMArPaarx+LSnV2WMtgVKsyYg1jBqFXK2MtvOT6KM2QUpmCTWlAVzChjQVnlHlwpBihEXgbt6f1TQLh+maZ3TSgyv/dUhJuchXPnn/FkbvYlE17g9XSaSDTxgw4ot1nR6NZl77yFdkA4pvq60mEHylSWboKlU5ABIkvFe8AKXQgI2Nn4q87ri4JMxdCAS+ekSDKd+DBt243h2rdD2KNnR4RKlv/TLW9J/RvhIY0qAgrlcIWoiyTlVPPSbb//QfeUcGP8qy0n7wUR5K0RMKxNnmf/nALESbW9UxQzo2EwMNvSBgQzuUcnLiXXLl5q5e1x63Vuot1/a2WhVzaqVSwDrq/BMc5E9ngU0dEXhhHU8JpelIiA12PV2t+l+d5eCK5ZIhrOM4Lchkb6RnUyEP6fsJmfGQ1x2RkoPWEDh2gpQJjF37cOP14e82U5Nh7WfkXZpqytQ2NsXh43wK2Rvr+bf7h3e336+3gn8reSw/ftN2d/xhXlSLoR7csvRpYcHXkWLyoa7EwGA3H5zWEPcn5eI2vncI="
 before_script:
   - cd src
 
@@ -7,7 +6,7 @@ addons:
   sonarcloud:
     organization: "valaragen"
     token:
-      secure: "**************************" # encrypted value of your token
+      secure: "vpkYLftE80kmWy77omRvQ97Uq125VX7d8dp56WXH2hkzM+i4rwrWphdm8T83ArVcG1JSuR3MAqJmnoRmF/0f27aiCedv2+gzwokoT8q+vXLaJ3jRm0vsf+tuHBm9nmCUctp1W8YhhVCf/TeyEGMArPaarx+LSnV2WMtgVKsyYg1jBqFXK2MtvOT6KM2QUpmCTWlAVzChjQVnlHlwpBihEXgbt6f1TQLh+maZ3TSgyv/dUhJuchXPnn/FkbvYlE17g9XSaSDTxgw4ot1nR6NZl77yFdkA4pvq60mEHylSWboKlU5ABIkvFe8AKXQgI2Nn4q87ri4JMxdCAS+ekSDKd+DBt243h2rdD2KNnR4RKlv/TLW9J/RvhIY0qAgrlcIWoiyTlVPPSbb//QfeUcGP8qy0n7wUR5K0RMKxNnmf/nALESbW9UxQzo2EwMNvSBgQzuUcnLiXXLl5q5e1x63Vuot1/a2WhVzaqVSwDrq/BMc5E9ngU0dEXhhHU8JpelIiA12PV2t+l+d5eCK5ZIhrOM4Lchkb6RnUyEP6fsJmfGQ1x2RkoPWEDh2gpQJjF37cOP14e82U5Nh7WfkXZpqytQ2NsXh43wK2Rvr+bf7h3e336+3gn8reSw/ftN2d/xhXlSLoR7csvRpYcHXkWLyoa7EwGA3H5zWEPcn5eI2vncI="
 
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
