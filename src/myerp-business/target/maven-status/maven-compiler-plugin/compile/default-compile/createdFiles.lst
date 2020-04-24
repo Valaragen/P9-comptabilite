@@ -1,3 +1,5 @@
+com\dummy\myerp\business\impl\manager\ComptabiliteManagerImpl.class
+com\dummy\myerp\business\util\Constant.class
 com\dummy\myerp\business\contrat\BusinessProxy.class
 com\dummy\myerp\business\contrat\manager\ComptabiliteManager.class
 com\dummy\myerp\business\impl\TransactionManager.class

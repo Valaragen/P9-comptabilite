@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../jacoco-resources/report.gif" type="image/gif"/><title>JournalComptable.java</title><link rel="stylesheet" href="../../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../../index.html" class="el_report">myerp-business</a> &gt; <a href="../index.html" class="el_bundle">myerp-model</a> &gt; <a href="index.source.html" class="el_package">com.dummy.myerp.model.bean.comptabilite</a> &gt; <span class="el_source">JournalComptable.java</span></div><h1>JournalComptable.java</h1><pre class="source lang-java linenums">package com.dummy.myerp.model.bean.comptabilite;
+
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import java.util.List;
+import java.util.Objects;
+
+
+/**
+ * Bean représentant un Journal Comptable
+ */
+public class JournalComptable {
+
+    // ==================== Attributs ====================
+    /**
+     * code
+     */
+    @NotNull
+    @Size(min = 1, max = 5)
+    private String code;
+
+    /**
+     * libelle
+     */
+    @NotNull
+    @Size(min = 1, max = 150)
+    private String libelle;
+
+
+    // ==================== Constructeurs ====================
+
+    /**
+     * Instantiates a new Journal comptable.
+     */
+<span class="nc" id="L35">    public JournalComptable() {</span>
+<span class="nc" id="L36">    }</span>
+
+    /**
+     * Instantiates a new Journal comptable.
+     *
+     * @param pCode    the p code
+     * @param pLibelle the p libelle
+     */
+<span class="fc" id="L44">    public JournalComptable(String pCode, String pLibelle) {</span>
+<span class="fc" id="L45">        code = pCode;</span>
+<span class="fc" id="L46">        libelle = pLibelle;</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     * Renvoie le {@link JournalComptable} de code {@code pCode} s'il est présent dans la liste
+     *
+     * @param pJournalComptableList la liste où chercher le {@link JournalComptable}
+     * @param pCode le code du {@link JournalComptable} à chercher
+     * @return {@link JournalComptable} ou {@code null}
+     */
+    public static JournalComptable getByCode(List&lt;? extends JournalComptable&gt; pJournalComptableList, String pCode) {
+<span class="fc" id="L57">        return pJournalComptableList.stream()</span>
+<span class="pc bpc" id="L58" title="1 of 4 branches missed.">                .filter(e -&gt; e != null &amp;&amp; Objects.equals(((JournalComptable) e).getCode(), pCode))</span>
+<span class="fc" id="L59">                .findFirst().orElse(null);</span>
+    }
+
+    // ==================== Getters/Setters ====================
+    public String getCode() {
+<span class="fc" id="L64">        return code;</span>
+    }
+
+    public void setCode(String pCode) {
+<span class="nc" id="L68">        code = pCode;</span>
+<span class="nc" id="L69">    }</span>
+
+    public String getLibelle() {
+<span class="nc" id="L72">        return libelle;</span>
+    }
+
+    public void setLibelle(String pLibelle) {
+<span class="nc" id="L76">        libelle = pLibelle;</span>
+<span class="nc" id="L77">    }</span>
+
+
+    // ==================== Méthodes STATIC ====================
+
+    @Override
+    public boolean equals(Object o) {
+<span class="nc bnc" id="L84" title="All 2 branches missed.">        if (this == o) return true;</span>
+<span class="nc bnc" id="L85" title="All 4 branches missed.">        if (o == null || getClass() != o.getClass()) return false;</span>
+<span class="nc" id="L86">        JournalComptable that = (JournalComptable) o;</span>
+<span class="nc bnc" id="L87" title="All 2 branches missed.">        return Objects.equals(code, that.code) &amp;&amp;</span>
+<span class="nc bnc" id="L88" title="All 2 branches missed.">                Objects.equals(libelle, that.libelle);</span>
+    }
+
+    @Override
+    public int hashCode() {
+<span class="nc" id="L93">        return Objects.hash(code, libelle);</span>
+    }
+
+    // ==================== Méthodes ====================
+    @Override
+    public String toString() {
+<span class="nc" id="L99">        final StringBuilder vStB = new StringBuilder(this.getClass().getSimpleName());</span>
+<span class="nc" id="L100">        final String vSEP = &quot;, &quot;;</span>
+<span class="nc" id="L101">        vStB.append(&quot;{&quot;)</span>
+<span class="nc" id="L102">                .append(&quot;code='&quot;).append(code).append('\'')</span>
+<span class="nc" id="L103">                .append(vSEP).append(&quot;libelle='&quot;).append(libelle).append('\'')</span>
+<span class="nc" id="L104">                .append(&quot;}&quot;);</span>
+<span class="nc" id="L105">        return vStB.toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.5.201910111838</span></div></body></html>

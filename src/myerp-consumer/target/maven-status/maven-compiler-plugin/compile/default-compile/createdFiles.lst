@@ -2,6 +2,7 @@ com\dummy\myerp\consumer\db\DataSourcesEnum.class
 com\dummy\myerp\consumer\dao\impl\db\rowmapper\comptabilite\EcritureComptableRM.class
 com\dummy\myerp\consumer\dao\impl\db\rowmapper\comptabilite\LigneEcritureComptableRM.class
 com\dummy\myerp\consumer\db\helper\ResultSetHelper.class
+com\dummy\myerp\consumer\dao\impl\db\rowmapper\comptabilite\SequenceEcritureComptableRM.class
 com\dummy\myerp\consumer\dao\impl\cache\JournalComptableDaoCache.class
 com\dummy\myerp\consumer\dao\impl\cache\CompteComptableDaoCache.class
 com\dummy\myerp\consumer\ConsumerHelper.class

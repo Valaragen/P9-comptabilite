@@ -60,6 +60,7 @@
         <sonar.organization>valaragen</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>c9aaa63a964912f2812c96a2734c4ea38086dce5</sonar.login>
+        <aggregate.report.dir>target/site/jacoco-aggregate/jacoco.xml</aggregate.report.dir>
     </properties>
 
 
@@ -78,17 +79,27 @@
     <!-- Profiles -->
     <!-- =============================================================== -->
     <profiles>
-        <!-- Profile utilisé par le plugin m2e d'Eclipse -->
         <profile>
-            <id>m2e</id>
+            <id>coverage</id>
             <activation>
-                <property>
-                    <name>m2e.version</name>
-                </property>
+                <activeByDefault>true</activeByDefault>
             </activation>
-            <properties>
-                <maven.build.timestamp>DD/MM/YYYY</maven.build.timestamp>
-            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.jacoco</groupId>
+                        <artifactId>jacoco-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>prepare-agent</id>
+                                <goals>
+                                    <goal>prepare-agent</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
         <profile>
@@ -453,22 +464,36 @@
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>3.0.0</version>
                 </plugin>
-                <!-- JACOCO -->
+
+                <!-- Sonarcloud + jacoco -->
+                <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.6.0.1398</version>
+                </plugin>
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <executions>
-                        <execution>
-                            <id>report</id>
-                            <goals>
-                                <goal>report-aggregate</goal>
-                            </goals>
-                            <phase>verify</phase>
-                        </execution>
-                    </executions>
+                    <version>0.8.5</version>
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 
 

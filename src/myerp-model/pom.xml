@@ -38,7 +38,7 @@
     <!-- =============================================================== -->
     <properties>
         <sonar.projectKey>Valaragen_P9-comptabilite-model</sonar.projectKey>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../myerp-model/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>${basedir}/../${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 
@@ -90,5 +90,20 @@
     <!-- Build -->
     <!-- =============================================================== -->
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>report</id>
+                        <goals>
+                            <goal>report-aggregate</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>

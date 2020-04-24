@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+myerp-model/myerp-technical,com.dummy.myerp.technical.util.spring,NullFactoryBean,13,0,0,0,6,0,4,0,4,0
+myerp-model/myerp-technical,com.dummy.myerp.technical.exception,NotFoundException,16,0,0,0,8,0,4,0,4,0
+myerp-model/myerp-technical,com.dummy.myerp.technical.exception,FunctionalException,13,0,0,0,6,0,3,0,3,0
+myerp-model/myerp-technical,com.dummy.myerp.technical.exception,TechnicalException,13,0,0,0,6,0,3,0,3,0
