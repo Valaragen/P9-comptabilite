@@ -37,6 +37,7 @@
     <!-- =============================================================== -->
     <properties>
         <sonar.projectKey>Valaragen_P9-comptabilite-consumer</sonar.projectKey>
+        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/../myerp-consumer/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 

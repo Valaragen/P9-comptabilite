@@ -1,55 +1,74 @@
 
 ]com.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable#equals(Ljava/lang/Object;)Zâ
-D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java ("paramAnnotations*Ú
+D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java ("startingBlock*
 2â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java" "(©
 ¶
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java" "(&>
-%98com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*R*PC
+%88com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*R*PC
 Acom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"	
-journal∞
-≠
+journalØ
+¨
 â
-D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java"( "(4?
-%108com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*X*V
+D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java"( "(4>
+%98com.dummy.myerp.model.bean.comptabilite.JournalComptable"__id*X*V
 I
 thatAcom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"	
-journal¸
-˘
+journal˚
+¯
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java" "(5
-%11boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+%10boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
 java.util.Objects*@
 >
-%98com.dummy.myerp.model.bean.comptabilite.JournalComptable*A
-?
-%108com.dummy.myerp.model.bean.comptabilite.JournalComptable*
-1*‰
+%88com.dummy.myerp.model.bean.comptabilite.JournalComptable*@
+>
+%98com.dummy.myerp.model.bean.comptabilite.JournalComptable*
+1*º
+startingBlockâ
+D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (#”
+–
+â
+D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (
+%11"
+__annotate*
+java.lang.Override*
+
+ojava.lang.ObjectΩ
+∫
+â
+D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java! ("
+ojava.lang.Object"__annotation*
+
+%11*	
+6
+7
+9*‰
 4â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java! !(â
 Ü
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java! !(-
-%6java.lang.Integer"__id*Y*WC
+%5java.lang.Integer"__id*Y*WC
 Acom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"
 derniereValeurè
 å
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java!/ !(B
-%7java.lang.Integer"__id*_*]
+%6java.lang.Integer"__id*_*]
 I
 thatAcom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"
 derniereValeur¨
 ©
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java! !(C
-%8boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+%7boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
 java.util.Objects*
 
-%6java.lang.Integer*
+%5java.lang.Integer*
 
-%7java.lang.Integer*
+%6java.lang.Integer*
 2
 1*—	
 5â
@@ -63,25 +82,25 @@ I
 ˝
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java   (#
-%3java.lang.Integer"__id*P*NC
+%2java.lang.Integer"__id*P*NC
 Acom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"
 anneeÜ
 É
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java %  (/
-%4java.lang.Integer"__id*V*T
+%3java.lang.Integer"__id*V*T
 I
 thatAcom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable"
 annee¨
 ©
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java   (0
-%5boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*"
 java.util.Objects*
 
-%3java.lang.Integer*
+%2java.lang.Integer*
 
-%4java.lang.Integer*	
+%3java.lang.Integer*	
 2
 4
 1*¶
@@ -94,12 +113,12 @@ I
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (!ß§
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (#
-%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*EC
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*EC
 Acom.dummy.myerp.model.bean.comptabilite.SequenceEcritureComptable2
 getClass()˘ˆ
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java' (3
-%2java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*
 
 ojava.lang.Object2
 getClass()*
@@ -109,26 +128,7 @@ getClass()*
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (""î
 â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (#
-""*Ω
-paramAnnotationsâ
-D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (#“
-œ
-â
-D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java (
-%0"
-__annotate*
-java.lang.Override*
-
-ojava.lang.Objectº
-π
-â
-D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java! ("
-ojava.lang.Object"__annotation*
-
-%0*	
-6
-7
-9*¶
+""*¶
 1â
 D:/Openclassroom/9-/compta/src/myerp-model/src/main/java/com/dummy/myerp/model/bean/comptabilite/SequenceEcritureComptable.java  "(6"î
 â
