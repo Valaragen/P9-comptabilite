@@ -55,7 +55,7 @@ public class JournalComptable {
      */
     public static JournalComptable getByCode(List<? extends JournalComptable> pJournalComptableList, String pCode) {
         return pJournalComptableList.stream()
-                .filter(e -> e != null && Objects.equals(((JournalComptable) e).getCode(), pCode))
+                .filter(e -> e != null && Objects.equals(e.getCode(), pCode))
                 .findFirst().orElse(null);
     }
 

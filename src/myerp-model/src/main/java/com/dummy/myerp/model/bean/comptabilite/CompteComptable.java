@@ -32,6 +32,7 @@ public class CompteComptable {
      * Instantiates a new Compte comptable.
      */
     public CompteComptable() {
+        super();
     }
 
     /**

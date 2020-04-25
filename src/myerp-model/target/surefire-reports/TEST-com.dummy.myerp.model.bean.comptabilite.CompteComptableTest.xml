@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.dummy.myerp.model.bean.comptabilite.CompteComptableTest" time="0.065" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.dummy.myerp.model.bean.comptabilite.CompteComptableTest" time="0.069" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rudy\AppData\Local\Temp\surefire5275848660423680768\surefirebooter2941099654608572834.jar C:\Users\Rudy\AppData\Local\Temp\surefire5275848660423680768 2020-04-25T17-02-42_727-jvmRun1 surefire10468847178733947078tmp surefire_04993263135700637347tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rudy\AppData\Local\Temp\surefire13842572386787330478\surefirebooter14682239707870925807.jar C:\Users\Rudy\AppData\Local\Temp\surefire13842572386787330478 2020-04-25T17-59-34_332-jvmRun1 surefire15911167622323349462tmp surefire_016869758620087890324tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Openclassroom\9-\compta\src\myerp-model\target\test-classes;D:\Openclassroom\9-\compta\src\myerp-model\target\classes;D:\Openclassroom\9-\compta\src\myerp-technical\target\myerp-technical-1.x.x-SNAPSHOT.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-api\2.8.1\log4j-api-2.8.1.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-core\2.8.1\log4j-core-2.8.1.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-jcl\2.8.1\log4j-jcl-2.8.1.jar;D:\Env\maven\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.1\log4j-slf4j-impl-2.8.1.jar;D:\Env\maven\repository\org\slf4j\slf4j-api\1.7.24\slf4j-api-1.7.24.jar;D:\Env\maven\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;D:\Env\maven\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Env\maven\repository\org\springframework\spring-core\5.2.4.RELEASE\spring-core-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-jcl\5.2.4.RELEASE\spring-jcl-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-context\5.2.4.RELEASE\spring-context-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-aop\5.2.4.RELEASE\spring-aop-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-expression\5.2.4.RELEASE\spring-expression-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-beans\5.2.4.RELEASE\spring-beans-5.2.4.RELEASE.jar;D:\Env\maven\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter\5.6.0\junit-jupiter-5.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;D:\Env\maven\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;D:\Env\maven\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;D:\Env\maven\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Env\maven\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;D:\Env\maven\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;D:\Env\maven\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;D:\Env\maven\repository\net\bytebuddy\byte-buddy\1.10.5\byte-buddy-1.10.5.jar;D:\Env\maven\repository\net\bytebuddy\byte-buddy-agent\1.10.5\byte-buddy-agent-1.10.5.jar;D:\Env\maven\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;D:\Env\maven\repository\org\assertj\assertj-core\3.15.0\assertj-core-3.15.0.jar;D:\Env\maven\repository\org\hibernate\validator\hibernate-validator\6.1.4.Final\hibernate-validator-6.1.4.Final.jar;D:\Env\maven\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;D:\Env\maven\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logging-3.3.2.Final.jar;D:\Env\maven\repository\com\fasterxml\classmate\1.3.4\classmate-1.3.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rudy\AppData\Local\Temp\surefire5275848660423680768\surefirebooter2941099654608572834.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rudy\AppData\Local\Temp\surefire13842572386787330478\surefirebooter14682239707870925807.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12+33"/>
@@ -58,6 +58,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="getByNumero_giveAnExistingCompteNumber_returnTheAssociatedCompteComptable" classname="com.dummy.myerp.model.bean.comptabilite.CompteComptableTest" time="0.054"/>
+  <testcase name="getByNumero_giveAnExistingCompteNumber_returnTheAssociatedCompteComptable" classname="com.dummy.myerp.model.bean.comptabilite.CompteComptableTest" time="0.056"/>
   <testcase name="getByNumero_giveANonExistingCompteNumber_returnNull" classname="com.dummy.myerp.model.bean.comptabilite.CompteComptableTest" time="0.001"/>
 </testsuite>

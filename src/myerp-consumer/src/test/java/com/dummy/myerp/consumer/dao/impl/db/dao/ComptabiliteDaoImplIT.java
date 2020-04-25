@@ -137,7 +137,6 @@ public class ComptabiliteDaoImplIT {
     @Rollback
     void insertEcritureComptableTest() throws ParseException, NotFoundException {
         EcritureComptable ecritureComptableToInsert = new EcritureComptable();
-        ecritureComptableToInsert.setId(-10);
         ecritureComptableToInsert.setJournal(new JournalComptable("OD", "Opérations Diverses"));
         ecritureComptableToInsert.setReference("OD-2016/00006");
         ecritureComptableToInsert.setDate(new SimpleDateFormat("yyyy-MM-dd").parse("2016-12-31"));
@@ -148,6 +147,7 @@ public class ComptabiliteDaoImplIT {
         objectToTest.insertEcritureComptable(ecritureComptableToInsert);
 
         EcritureComptable insertedEcritureComptable = objectToTest.getEcritureComptableByRef("OD-2016/00006");
+        System.out.println(insertedEcritureComptable);
 
         Assertions.assertThat(insertedEcritureComptable).isEqualTo(ecritureComptableToInsert);
     }

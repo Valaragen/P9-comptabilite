@@ -11,17 +11,7 @@ import java.util.Date;
 /**
  * Classe utilitaire travaillant sur les ResultSet
  */
-public abstract class ResultSetHelper {
-
-    // ==================== Constructeurs ====================
-
-    /**
-     * Constructeur.
-     */
-    protected ResultSetHelper() {
-        super();
-    }
-
+public interface ResultSetHelper {
 
     // ==================== Méthodes ====================
 
@@ -34,11 +24,11 @@ public abstract class ResultSetHelper {
      * @return <code>Integer</code> ou <code>null</code>
      * @throws SQLException sur erreur SQL
      */
-    public static Integer getInteger(ResultSet pRS, String pColName) throws SQLException {
+    static Integer getInteger(ResultSet pRS, String pColName) throws SQLException {
         Integer vRetour = null;
         int vInt = pRS.getInt(pColName);
         if (!pRS.wasNull()) {
-            vRetour = new Integer(vInt);
+            vRetour = vInt;
         }
         return vRetour;
     }
@@ -52,11 +42,11 @@ public abstract class ResultSetHelper {
      * @return <code>Long</code> ou <code>null</code>
      * @throws SQLException sur erreur SQL
      */
-    public static Long getLong(ResultSet pRS, String pColName) throws SQLException {
+    static Long getLong(ResultSet pRS, String pColName) throws SQLException {
         Long vRetour = null;
         Long vLong = pRS.getLong(pColName);
         if (!pRS.wasNull()) {
-            vRetour = new Long(vLong);
+            vRetour = vLong;
         }
         return vRetour;
     }
@@ -71,7 +61,7 @@ public abstract class ResultSetHelper {
      * @return {@link Date} ou <code>null</code>
      * @throws SQLException sur erreur SQL
      */
-    public static Date getDate(ResultSet pRS, String pColName) throws SQLException {
+    static Date getDate(ResultSet pRS, String pColName) throws SQLException {
         Date vDate = pRS.getDate(pColName);
         if (vDate != null) {
             vDate = DateUtils.truncate(vDate, Calendar.DATE);
