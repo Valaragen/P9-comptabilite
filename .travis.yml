@@ -20,4 +20,4 @@ script:
   - cd docker/dev
   - docker-compose up -d
   - cd ../../src
-  - mvn clean verify sonar:sonar -Dsonar.projectKey=Valaragen_P9-comptabilite
+  - mvn clean verify sonar:sonar -Dsonar.projectKey=Valaragen_P9-comptabilite -Pit
