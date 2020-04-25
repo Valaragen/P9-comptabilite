@@ -33,6 +33,7 @@ public class ComptabiliteManagerImpl extends AbstractBusinessManager implements 
      * Instantiates a new Comptabilite manager.
      */
     public ComptabiliteManagerImpl() {
+        super();
     }
 
 

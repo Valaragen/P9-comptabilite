@@ -24,6 +24,7 @@ public class JournalComptableDaoCache {
      * Instantiates a new Compte comptable dao cache.
      */
     public JournalComptableDaoCache() {
+        super();
     }
 
 
@@ -40,7 +41,6 @@ public class JournalComptableDaoCache {
             listJournalComptable = ConsumerHelper.getDaoProxy().getComptabiliteDao().getListJournalComptable();
         }
 
-        JournalComptable vRetour = JournalComptable.getByCode(listJournalComptable, pCode);
-        return vRetour;
+        return JournalComptable.getByCode(listJournalComptable, pCode);
     }
 }

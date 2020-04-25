@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.855" tests="16" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.86" tests="16" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-12\bin"/>
-    <property name="sun.java.command" value="C:\Users\Rudy\AppData\Local\Temp\surefire8927133635507175357\surefirebooter9603755015883421311.jar C:\Users\Rudy\AppData\Local\Temp\surefire8927133635507175357 2020-04-25T16-34-08_576-jvmRun1 surefire14921458947283162745tmp surefire_03123551186888815105tmp"/>
+    <property name="sun.java.command" value="C:\Users\Rudy\AppData\Local\Temp\surefire17876907529198074298\surefirebooter4192301451929486401.jar C:\Users\Rudy\AppData\Local\Temp\surefire17876907529198074298 2020-04-25T17-02-42_137-jvmRun1 surefire15127058508413995016tmp surefire_09575076310519864869tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Openclassroom\9-\compta\src\myerp-consumer\target\test-classes;D:\Openclassroom\9-\compta\src\myerp-consumer\target\myerp-consumer-1.x.x-SNAPSHOT.jar;D:\Openclassroom\9-\compta\src\myerp-model\target\myerp-model-1.x.x-SNAPSHOT.jar;D:\Openclassroom\9-\compta\src\myerp-technical\target\myerp-technical-1.x.x-SNAPSHOT.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-api\2.8.1\log4j-api-2.8.1.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-core\2.8.1\log4j-core-2.8.1.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-jcl\2.8.1\log4j-jcl-2.8.1.jar;D:\Env\maven\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.8.1\log4j-slf4j-impl-2.8.1.jar;D:\Env\maven\repository\org\slf4j\slf4j-api\1.7.24\slf4j-api-1.7.24.jar;D:\Env\maven\repository\org\apache\commons\commons-lang3\3.9\commons-lang3-3.9.jar;D:\Env\maven\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;D:\Env\maven\repository\org\springframework\spring-core\5.2.4.RELEASE\spring-core-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-jcl\5.2.4.RELEASE\spring-jcl-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-context\5.2.4.RELEASE\spring-context-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-aop\5.2.4.RELEASE\spring-aop-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-expression\5.2.4.RELEASE\spring-expression-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-beans\5.2.4.RELEASE\spring-beans-5.2.4.RELEASE.jar;D:\Env\maven\repository\javax\validation\validation-api\2.0.1.Final\validation-api-2.0.1.Final.jar;D:\Env\maven\repository\org\springframework\spring-jdbc\5.2.4.RELEASE\spring-jdbc-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\springframework\spring-tx\5.2.4.RELEASE\spring-tx-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter\5.6.0\junit-jupiter-5.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;D:\Env\maven\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;D:\Env\maven\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;D:\Env\maven\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;D:\Env\maven\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;D:\Env\maven\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;D:\Env\maven\repository\org\mockito\mockito-junit-jupiter\3.3.3\mockito-junit-jupiter-3.3.3.jar;D:\Env\maven\repository\org\mockito\mockito-core\3.3.3\mockito-core-3.3.3.jar;D:\Env\maven\repository\net\bytebuddy\byte-buddy\1.10.5\byte-buddy-1.10.5.jar;D:\Env\maven\repository\net\bytebuddy\byte-buddy-agent\1.10.5\byte-buddy-agent-1.10.5.jar;D:\Env\maven\repository\org\objenesis\objenesis\2.6\objenesis-2.6.jar;D:\Env\maven\repository\org\assertj\assertj-core\3.15.0\assertj-core-3.15.0.jar;D:\Env\maven\repository\org\springframework\spring-test\5.2.4.RELEASE\spring-test-5.2.4.RELEASE.jar;D:\Env\maven\repository\org\apache\commons\commons-dbcp2\2.7.0\commons-dbcp2-2.7.0.jar;D:\Env\maven\repository\org\apache\commons\commons-pool2\2.7.0\commons-pool2-2.7.0.jar;D:\Env\maven\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;D:\Env\maven\repository\org\postgresql\postgresql\42.2.10\postgresql-42.2.10.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,7 +33,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\Rudy\AppData\Local\Temp\surefire8927133635507175357\surefirebooter9603755015883421311.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Rudy\AppData\Local\Temp\surefire17876907529198074298\surefirebooter4192301451929486401.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="12+33"/>
@@ -58,20 +58,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="56.0"/>
   </properties>
-  <testcase name="updateSequenceEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.173"/>
-  <testcase name="deleteEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.027"/>
-  <testcase name="insertEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.03"/>
-  <testcase name="getListEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.043"/>
+  <testcase name="updateSequenceEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.176"/>
+  <testcase name="deleteEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.029"/>
+  <testcase name="insertEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.028"/>
+  <testcase name="getListEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.039"/>
   <testcase name="getListJournalComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.003"/>
   <testcase name="getEcritureComptable_idNotExistInDB_throwNotFoundException" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.005"/>
-  <testcase name="loadListLigneEcritureTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.006"/>
-  <testcase name="getEcritureComptable_idExistInDB_returnCorrectEcritureComptable" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.01"/>
+  <testcase name="loadListLigneEcritureTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.004"/>
+  <testcase name="getEcritureComptable_idExistInDB_returnCorrectEcritureComptable" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.008"/>
   <testcase name="getInstanceTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.001"/>
-  <testcase name="getEcritureComptableByRef_idExistInDB_returnCorrectEcritureComptable" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.009"/>
+  <testcase name="getEcritureComptableByRef_idExistInDB_returnCorrectEcritureComptable" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.007"/>
   <testcase name="applicationContextTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.001"/>
-  <testcase name="updateEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.015"/>
+  <testcase name="updateEcritureComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.014"/>
   <testcase name="insertNewSequenceTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.006"/>
-  <testcase name="getEcritureComptableByRef_idNotExistInDB_throwNotFoundException" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.003"/>
-  <testcase name="getListCompteComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.003"/>
+  <testcase name="getEcritureComptableByRef_idNotExistInDB_throwNotFoundException" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.002"/>
+  <testcase name="getListCompteComptableTest" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.002"/>
   <testcase name="getSequenceByYearAndJournalCode" classname="com.dummy.myerp.consumer.dao.impl.db.dao.ComptabiliteDaoImplIT" time="0.005"/>
 </testsuite>
