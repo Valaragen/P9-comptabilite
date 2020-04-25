@@ -37,7 +37,6 @@
     <!-- =============================================================== -->
     <properties>
         <sonar.projectKey>Valaragen_P9-comptabilite-consumer</sonar.projectKey>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 
@@ -49,6 +48,10 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>myerp-model</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dummy.myerp</groupId>
+            <artifactId>myerp-technical</artifactId>
         </dependency>
 
         <!-- spring-jdbc : commons-exceptions, datasource management -->

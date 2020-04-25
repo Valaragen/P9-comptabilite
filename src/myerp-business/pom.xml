@@ -38,7 +38,6 @@
     <!-- =============================================================== -->
     <properties>
         <sonar.projectKey>Valaragen_P9-comptabilite-business</sonar.projectKey>
-        <sonar.coverage.jacoco.xmlReportPaths>${project.basedir}/${aggregate.report.dir}</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 
@@ -54,6 +53,10 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>myerp-consumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>myerp-technical</artifactId>
         </dependency>
 
         <!-- ===== Spring JDBC/Tx ===== -->

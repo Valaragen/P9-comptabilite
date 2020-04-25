@@ -26,23 +26,4 @@ public class NotFoundException extends Exception {
     public NotFoundException(String pMessage) {
         super(pMessage);
     }
-
-    /**
-     * Constructeur.
-     *
-     * @param pCause -
-     */
-    public NotFoundException(Throwable pCause) {
-        super(pCause);
-    }
-
-    /**
-     * Constructeur.
-     *
-     * @param pMessage -
-     * @param pCause   -
-     */
-    public NotFoundException(String pMessage, Throwable pCause) {
-        super(pMessage, pCause);
-    }
 }
