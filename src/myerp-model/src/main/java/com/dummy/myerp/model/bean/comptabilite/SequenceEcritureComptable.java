@@ -43,6 +43,7 @@ public class SequenceEcritureComptable {
      * Constructeur
      */
     public SequenceEcritureComptable() {
+        journal = new JournalComptable();
     }
 
     /**
