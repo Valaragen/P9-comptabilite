@@ -89,7 +89,7 @@ public abstract class AbstractDbConsumer {
     protected DataSource getDataSource(DataSourcesEnum pDataSourceId) {
         DataSource vRetour = AbstractDbConsumer.mapDataSource.get(pDataSourceId);
         if (vRetour == null) {
-            throw new UnsatisfiedLinkError("La DataSource suivante n'a pas été initialisée : " + pDataSourceId);
+            throw new UnsatisfiedLinkError("La DataSource suivante n\'a pas été initialisée : " + pDataSourceId);
         }
         return vRetour;
     }

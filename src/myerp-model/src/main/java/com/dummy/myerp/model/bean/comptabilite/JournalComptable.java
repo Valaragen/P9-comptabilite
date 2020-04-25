@@ -31,12 +31,6 @@ public class JournalComptable {
 
     /**
      * Instantiates a new Journal comptable.
-     */
-    public JournalComptable() {
-    }
-
-    /**
-     * Instantiates a new Journal comptable.
      *
      * @param pCode    the p code
      * @param pLibelle the p libelle

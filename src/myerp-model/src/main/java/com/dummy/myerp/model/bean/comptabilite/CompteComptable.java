@@ -30,18 +30,12 @@ public class CompteComptable {
 
     /**
      * Instantiates a new Compte comptable.
-     */
-    public CompteComptable() {
-        super();
-    }
-
-    /**
-     * Instantiates a new Compte comptable.
      *
      * @param pNumero the numero
      */
     public CompteComptable(Integer pNumero) {
         numero = pNumero;
+        libelle = "";
     }
 
     /**
