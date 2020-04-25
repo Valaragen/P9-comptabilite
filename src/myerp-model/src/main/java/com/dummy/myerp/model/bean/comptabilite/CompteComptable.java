@@ -30,6 +30,14 @@ public class CompteComptable {
 
     /**
      * Instantiates a new Compte comptable.
+     */
+    public CompteComptable() {
+        numero = 0;
+        libelle = "";
+    }
+
+    /**
+     * Instantiates a new Compte comptable.
      *
      * @param pNumero the numero
      */

@@ -44,6 +44,13 @@ public class LigneEcritureComptable {
 
     /**
      * Instantiates a new Ligne ecriture comptable.
+     */
+    public LigneEcritureComptable() {
+        compteComptable = new CompteComptable();
+    }
+
+    /**
+     * Instantiates a new Ligne ecriture comptable.
      *
      * @param pCompteComptable the Compte Comptable
      * @param pLibelle         the libelle

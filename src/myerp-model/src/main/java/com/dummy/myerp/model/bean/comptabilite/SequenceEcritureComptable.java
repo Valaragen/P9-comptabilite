@@ -41,6 +41,12 @@ public class SequenceEcritureComptable {
 
     /**
      * Constructeur
+     */
+    public SequenceEcritureComptable() {
+    }
+
+    /**
+     * Constructeur
      *
      * @param pAnnee          -
      * @param pDerniereValeur -
