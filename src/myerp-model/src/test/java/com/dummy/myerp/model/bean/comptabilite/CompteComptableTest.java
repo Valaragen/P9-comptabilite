@@ -19,6 +19,7 @@ public class CompteComptableTest {
 
     @BeforeEach
     void init() {
+        objectToTest = new CompteComptable();
         compteComptableList = new ArrayList<>();
         compteComptableList.add(fournisseur);
         compteComptableList.add(clientVentes);
