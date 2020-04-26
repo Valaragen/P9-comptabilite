@@ -2,7 +2,6 @@ package com.dummy.myerp.consumer.db;
 
 import com.dummy.myerp.consumer.ConsumerHelper;
 import com.dummy.myerp.consumer.dao.contrat.DaoProxy;
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -70,10 +69,8 @@ public abstract class AbstractDbConsumer {
             // On test si la DataSource est configurée
             // (NB : elle est considérée comme configurée si elle est dans pMapDataSource mais à null)
             if (vDataSource == null) {
-                if (!pMapDataSource.containsKey(vDataSourceId)) {
-                    if (LOGGER.isErrorEnabled()) {
-                        LOGGER.error(MessageFormat.format("La DataSource {0} n''a pas été initialisée !", vDataSourceId));
-                    }
+                if (!pMapDataSource.containsKey(vDataSourceId) && LOGGER.isErrorEnabled()) {
+                    LOGGER.error(MessageFormat.format("La DataSource {0} n''a pas été initialisée !", vDataSourceId));
                 }
             } else {
                 vMapDataSource.put(vDataSourceId, vDataSource);
