@@ -1,5 +1,0 @@
-com\dummy\myerp\business\impl\BusinessProxyImplTest.class
-com\dummy\myerp\business\InitSpringContextTest.class
-com\dummy\myerp\business\impl\manager\ComptabiliteManagerImplIT.class
-com\dummy\myerp\business\config\BusinessContextBeans.class
-com\dummy\myerp\business\impl\manager\ComptabiliteManagerImplTest.class

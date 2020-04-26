@@ -38,6 +38,7 @@
     <!-- =============================================================== -->
     <properties>
         <sonar.projectKey>Valaragen_P9-comptabilite-business</sonar.projectKey>
+        <sonar.coverage.jacoco.xmlReportPaths>${basedir}\target\site\jacoco\jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
 
 

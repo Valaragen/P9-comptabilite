@@ -1,24 +1,0 @@
-
-¨com.dummy.myerp.business.impl.TransactionManager#getInstance(Lorg/springframework/transaction/PlatformTransactionManager;)Lcom/dummy/myerp/business/impl/TransactionManager;{
-qD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/TransactionManager.java0% 0(0"1*ô
-1{
-qD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/TransactionManager.java1 1(ì
-ê
-{
-qD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/TransactionManager.java1 1(@2
-0com.dummy.myerp.business.impl.TransactionManager"
-
-ptmMyERP"__id*I
-G
-	pPtmMyERP:org.springframework.transaction.PlatformTransactionManager∆
-√
-{
-qD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/TransactionManager.java2 2(*6
-%00com.dummy.myerp.business.impl.TransactionManager"__id*
-"""∑
-{
-qD:/Openclassroom/9-/compta/src/myerp-business/src/main/java/com/dummy/myerp/business/impl/TransactionManager.java2 2(+8
-6
-%00com.dummy.myerp.business.impl.TransactionManager:G
-	pPtmMyERP:org.springframework.transaction.PlatformTransactionManagerB4"2
-0com.dummy.myerp.business.impl.TransactionManager
