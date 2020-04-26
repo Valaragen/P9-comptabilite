@@ -1,6 +1,6 @@
 package com.dummy.myerp.business.util;
 
-public abstract class Constant {
+public final class Constant {
     private Constant() {
         throw new IllegalStateException("Utility class");
     }
