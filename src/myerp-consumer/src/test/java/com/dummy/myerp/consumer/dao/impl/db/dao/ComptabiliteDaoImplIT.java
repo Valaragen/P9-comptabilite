@@ -147,7 +147,6 @@ public class ComptabiliteDaoImplIT {
         objectToTest.insertEcritureComptable(ecritureComptableToInsert);
 
         EcritureComptable insertedEcritureComptable = objectToTest.getEcritureComptableByRef("OD-2016/00006");
-        System.out.println(insertedEcritureComptable);
 
         Assertions.assertThat(insertedEcritureComptable).isEqualTo(ecritureComptableToInsert);
     }

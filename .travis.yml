@@ -3,8 +3,6 @@ language: java
 cache:
   directories:
     - $HOME/.m2
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
 
 services:
   - docker
@@ -20,4 +18,4 @@ script:
   - cd docker/dev
   - docker-compose up -d
   - cd ../../src
-  - mvn clean verify sonar:sonar -Dsonar.projectKey=Valaragen_P9-comptabilite -Pcoverage,it
+  - mvn clean verify sonar:sonar -Dsonar.projectKey=Valaragen_P9-comptabilite -Pcoverage,all-test
