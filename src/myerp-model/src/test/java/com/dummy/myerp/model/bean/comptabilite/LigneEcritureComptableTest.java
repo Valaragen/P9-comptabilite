@@ -55,5 +55,10 @@ public class LigneEcritureComptableTest {
         Assertions.assertThat(objectToTest.getCredit()).isNull();
     }
 
+    @Test
+    void toString_shouldNotThrowException_whenCalled() {
+        Assertions.assertThatCode(() -> objectToTest.toString()).doesNotThrowAnyException();
+    }
+
 
 }

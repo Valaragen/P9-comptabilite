@@ -11,13 +11,17 @@ import java.util.List;
 @Tag("JournalComptableTest")
 public class JournalComptableTest {
 
+
     private JournalComptable JCBanque = new JournalComptable("BQ", "Banque");
     private JournalComptable JCOperationsDiverses = new JournalComptable("OP", "Opérations diverses");
 
     private List<JournalComptable> journalComptableList;
 
+    private JournalComptable objectToTest;
+
     @BeforeEach
     void init() {
+        objectToTest = new JournalComptable();
         journalComptableList = new ArrayList<>();
         journalComptableList.add(JCBanque);
         journalComptableList.add(JCOperationsDiverses);
@@ -35,5 +39,10 @@ public class JournalComptableTest {
         JournalComptable result = JournalComptable.getByCode(journalComptableList, "NONEXISTING");
 
         Assertions.assertThat(result).isNull();
+    }
+
+    @Test
+    void toString_shouldNotThrowException_whenCalled() {
+        Assertions.assertThatCode(() -> objectToTest.toString()).doesNotThrowAnyException();
     }
 }

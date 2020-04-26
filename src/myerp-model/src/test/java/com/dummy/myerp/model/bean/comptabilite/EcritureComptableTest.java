@@ -5,6 +5,7 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -44,7 +45,9 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, value1, null));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, value2, "33"));
 
-        Assertions.assertThat(objectToTest.getTotalDebit()).isEqualTo(expectedResult);
+        BigDecimal result = objectToTest.getTotalDebit();
+
+        Assertions.assertThat(result).isEqualTo(expectedResult);
     }
 
     @ParameterizedTest(name = "{0} + {1} should return {2}")
@@ -57,7 +60,9 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, value1, null));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, value2, "33"));
 
-        Assertions.assertThat(objectToTest.getTotalDebit()).isEqualTo(expectedResult);
+        BigDecimal result = objectToTest.getTotalDebit();
+
+        Assertions.assertThat(result).isEqualTo(expectedResult);
     }
 
     @ParameterizedTest(name = "{0} + {1} should return {2}")
@@ -72,7 +77,9 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, null, value1));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, "33", value2));
 
-        Assertions.assertThat(objectToTest.getTotalCredit()).isEqualTo(expectedResult);
+        BigDecimal result = objectToTest.getTotalCredit();
+
+        Assertions.assertThat(result).isEqualTo(expectedResult);
     }
 
     @ParameterizedTest(name = "{0} + {1} should return {2}")
@@ -85,7 +92,9 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, null, value1));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, "33", value2));
 
-        Assertions.assertThat(objectToTest.getTotalCredit()).isEqualTo(expectedResult);
+        BigDecimal result = objectToTest.getTotalCredit();
+
+        Assertions.assertThat(result).isEqualTo(expectedResult);
     }
 
     @ParameterizedTest(name = "{0} + {1} + {2} = {3} + {4} + {5} should return true")
@@ -98,7 +107,10 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, arg1, arg4));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, arg2, arg5));
         objectToTest.getListLigneEcriture().add(this.createLigne(2, arg3, arg6));
-        Assertions.assertThat(objectToTest.isEquilibree()).isTrue();
+
+        boolean result = objectToTest.isEquilibree();
+
+        Assertions.assertThat(result).isTrue();
     }
 
     @ParameterizedTest(name = "{0} + {1} + {2} = {3} + {4} + {5} should return false")
@@ -111,7 +123,21 @@ class EcritureComptableTest {
         objectToTest.getListLigneEcriture().add(this.createLigne(1, arg1, arg4));
         objectToTest.getListLigneEcriture().add(this.createLigne(1, arg2, arg5));
         objectToTest.getListLigneEcriture().add(this.createLigne(2, arg3, arg6));
-        Assertions.assertThat(objectToTest.isEquilibree()).isFalse();
+
+        boolean result = objectToTest.isEquilibree();
+
+        Assertions.assertThat(result).isFalse();
     }
+
+    @Test
+    void toString_shouldNotThrowException_whenCalled() {
+        objectToTest.getListLigneEcriture().add(this.createLigne(1, "10", "1"));
+        objectToTest.getListLigneEcriture().add(this.createLigne(1, "20", "10"));
+        objectToTest.getListLigneEcriture().add(this.createLigne(2, "1", "21"));
+
+        Assertions.assertThatCode(() -> objectToTest.toString()).doesNotThrowAnyException();
+    }
+
+
 
 }

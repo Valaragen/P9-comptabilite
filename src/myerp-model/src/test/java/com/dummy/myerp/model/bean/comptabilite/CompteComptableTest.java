@@ -39,4 +39,9 @@ public class CompteComptableTest {
         Assertions.assertThat(objectToTest).isNull();
     }
 
+    @Test
+    void toString_shouldNotThrowException_whenCalled() {
+        Assertions.assertThatCode(() -> objectToTest.toString()).doesNotThrowAnyException();
+    }
+
 }
