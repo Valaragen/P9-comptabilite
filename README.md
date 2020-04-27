@@ -25,6 +25,7 @@ Dans ce projet, ce service a pour rôle d’exécuter tous les tests à chaque *
 Il se charge aussi de :
  - Créer l'environnement de développement pour **executer les tests d'integration** à partir d'un fichier **docker-compose.yml**.  
  - Envoyer **les rapports de couverture du code** à **SonarCloud**. 
+> Travis CI est configuré via le fichier [.travis.yml](https://github.com/Valaragen/P9-comptabilite/blob/test/.travis.yml)  
 > [Lien vers les builds travis CI du projet](https://travis-ci.org/Valaragen/P9-comptabilite)
  
 ## Lancer les tests
