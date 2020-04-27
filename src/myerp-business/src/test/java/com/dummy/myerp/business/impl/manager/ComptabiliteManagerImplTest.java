@@ -153,6 +153,7 @@ public class ComptabiliteManagerImplTest {
     @Test
     void addReference_shouldThrowFunctionalException_whenEcritureComptableDateIsNull() {
         sampleEcritureComptable.setDate(null);
+
         Assertions.assertThatThrownBy(() -> objectToTest.addReference(sampleEcritureComptable))
                 .isInstanceOf(FunctionalException.class)
                 .hasMessageContaining(Constant.ECRITURE_COMPTABLE_DATE_NULL_FOR_ADD_REFERENCE);
@@ -161,6 +162,18 @@ public class ComptabiliteManagerImplTest {
     @Test
     void addReference_shouldThrowFunctionalException_whenEcritureComptableJournalIsNull() {
         sampleEcritureComptable.setJournal(null);
+
+        Assertions.assertThatThrownBy(() -> objectToTest.addReference(sampleEcritureComptable))
+                .isInstanceOf(FunctionalException.class)
+                .hasMessageContaining(Constant.ECRITURE_COMPTABLE_JOURNAL_NULL_FOR_ADD_REFERENCE);
+    }
+
+    @Test
+    void addReference_shouldThrowFunctionalException_whenEcritureComptableJournalCodeIsNull() {
+        JournalComptable brokenJournalComptable = new JournalComptable();
+        brokenJournalComptable.setCode(null);
+        sampleEcritureComptable.setJournal(brokenJournalComptable);
+
         Assertions.assertThatThrownBy(() -> objectToTest.addReference(sampleEcritureComptable))
                 .isInstanceOf(FunctionalException.class)
                 .hasMessageContaining(Constant.ECRITURE_COMPTABLE_JOURNAL_NULL_FOR_ADD_REFERENCE);
@@ -308,11 +321,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(comptabiliteDao).insertEcritureComptable(sampleEcritureComptable);
 
-        try {
-            objectToTest.insertEcritureComptable(sampleEcritureComptable);
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.insertEcritureComptable(sampleEcritureComptable));
 
         Mockito.verify(transactionManager, Mockito.never()).commitMyERP(Mockito.any());
         Mockito.verify(transactionManager).rollbackMyERP(Mockito.any());
@@ -326,11 +335,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(transactionManager).commitMyERP(transactionStatus);
 
-        try {
-            objectToTest.insertEcritureComptable(sampleEcritureComptable);
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.insertEcritureComptable(sampleEcritureComptable));
 
         Mockito.verify(transactionManager, Mockito.never()).rollbackMyERP(Mockito.any());
     }
@@ -358,11 +363,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(comptabiliteDao).updateEcritureComptable(sampleEcritureComptable);
 
-        try {
-            objectToTest.updateEcritureComptable(sampleEcritureComptable);
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.updateEcritureComptable(sampleEcritureComptable));
 
         Mockito.verify(transactionManager, Mockito.never()).commitMyERP(Mockito.any());
         Mockito.verify(transactionManager).rollbackMyERP(Mockito.any());
@@ -376,11 +377,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(transactionManager).commitMyERP(transactionStatus);
 
-        try {
-            objectToTest.updateEcritureComptable(sampleEcritureComptable);
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.updateEcritureComptable(sampleEcritureComptable));
 
         Mockito.verify(transactionManager, Mockito.never()).rollbackMyERP(Mockito.any());
     }
@@ -408,11 +405,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(comptabiliteDao).deleteEcritureComptable(sampleEcritureComptable.getId());
 
-        try {
-            objectToTest.deleteEcritureComptable(sampleEcritureComptable.getId());
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.deleteEcritureComptable(sampleEcritureComptable.getId()));
 
         Mockito.verify(transactionManager, Mockito.never()).commitMyERP(Mockito.any());
         Mockito.verify(transactionManager).rollbackMyERP(Mockito.any());
@@ -426,11 +419,7 @@ public class ComptabiliteManagerImplTest {
         Mockito.when(transactionManager.beginTransactionMyERP()).thenReturn(transactionStatus);
         Mockito.doThrow(RuntimeException.class).when(transactionManager).commitMyERP(transactionStatus);
 
-        try {
-            objectToTest.deleteEcritureComptable(sampleEcritureComptable.getId());
-        } catch (RuntimeException e) {
-            //No catch logic required
-        }
+        Assertions.assertThatThrownBy(() -> objectToTest.deleteEcritureComptable(sampleEcritureComptable.getId()));
 
         Mockito.verify(transactionManager, Mockito.never()).rollbackMyERP(Mockito.any());
     }
