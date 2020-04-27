@@ -20,7 +20,7 @@ Des rapports de **couverture du code par les test** sont générés avec **Jacoc
 
 #### Travis CI 
 Mise en place d’un **service d’intégration continue** « **Travis CI** ».  
-Dans ce projet, ce service a pour rôle d’exécuter tous les tests à chaque **modification du repository Githu**b et de **fournir un resultat en fonction de l'échec ou non des tests**.  
+Dans ce projet, ce service a pour rôle d’exécuter tous les tests à chaque **commit ou pull request sur la branche master** et de **fournir un resultat en fonction de l'échec ou non des tests**.  
 Il se charge aussi de :
  - Créer l'environnement de développement pour **executer les tests d'integration** à partir d'un fichier **docker-compose.yml**.  
  - Envoyer **les rapports de couverture du code** à **SonarCloud**. 
@@ -28,11 +28,11 @@ Il se charge aussi de :
 ## Lancer les tests
 
 **Les tests se lancent via le build maven**. Des **profiles maven** ont été créés pour **lancer les tests** et **activer les rapports de couverture de code**.
- - Lancer les tests unitaires : `Mvn test`  
- - Lancer uniquement uniquement les tests d’intégrations : `Mvn verify -Pit-only`  
- - Lancer les tests d’intégration et les tests unitaires : `Mvn verify -Pall-test`
+ - Lancer les tests unitaires : **`Mvn test`**  
+ - Lancer uniquement les tests d’intégrations : **`Mvn verify -Pit-only`**  
+ - Lancer les tests d’intégration et les tests unitaires : **`Mvn verify -Pall-test`**
  - Activer la couverture du code avec **-Pcoverage**  
-_Exemple : couverture du code pour tous les tests : `Mvn verify -Pall-test,coverage`_
+_Exemple : couverture du code pour tous les tests : **`Mvn verify -Pall-test,coverage`**_
 
 ## Organisation du répertoire
 
