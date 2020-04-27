@@ -5,25 +5,27 @@ Votre équipe est en train de réaliser un système de facturation et de comptab
 Le développement a débuté depuis quelques temps et vous devez commencer à vérifier que l'application fonctionne correctement, qu'elle répond bien aux règles de gestion et les respecte.
 
 ## Travail effectué
-#### Tests unitaires
+### Tests unitaires
 **Ajout de tests unitaires** pour tester les différents modules de l’application. 
 **Le projet respecte une architecture maven multi modules**.  
 Les tests unitaires se trouvent dans le répertoire « **src/main/test/Java** » du module associé.  
 **Le nom des classes de tests unitaires** se terminent par le mot clé **'Test'**
  
-#### Tests d'intégration
+### Tests d'intégration
 Ajouts de tests d’intégration pour tester la communication avec la base de données et les communications entre les différents modules.  
 **Le nom des classes de tests d'integration** se terminent par le mot clé **'IT'**
 
-#### Couverture de code et qualité
+### Couverture de code et qualité
 Des rapports de **couverture du code par les test** sont générés avec **Jacoco-maven-plugin**. L'analyse de ces rapports et de la qualité du code est faite avec **SonarCloud**.
+> [Lien vers le rapport SonarCloud](https://sonarcloud.io/dashboard?id=Valaragen_P9-comptabilite)
 
-#### Travis CI 
+### Travis CI 
 Mise en place d’un **service d’intégration continue** « **Travis CI** ».  
 Dans ce projet, ce service a pour rôle d’exécuter tous les tests à chaque **commit ou pull request sur la branche master** et de **fournir un resultat en fonction de l'échec ou non des tests**.  
 Il se charge aussi de :
  - Créer l'environnement de développement pour **executer les tests d'integration** à partir d'un fichier **docker-compose.yml**.  
  - Envoyer **les rapports de couverture du code** à **SonarCloud**. 
+> [Lien vers les builds travis CI du projet](https://travis-ci.org/Valaragen/P9-comptabilite)
  
 ## Lancer les tests
 
